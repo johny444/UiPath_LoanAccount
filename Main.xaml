@@ -7,7 +7,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1070,807</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,807</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -137,10 +137,10 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">70,22.5</av:Point>
+        <av:Point x:Key="ShapeLocation">60,2.5</av:Point>
         <x:Double x:Key="StateContainerWidth">686.4</x:Double>
         <x:Double x:Key="StateContainerHeight">705</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">130,60.1 160,60.1 160,59.466666666666654 223,59.466666666666654</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">120,40 150,40 150,59.36666666666666 223,59.36666666666666</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -483,7 +483,7 @@
                   <Transition.To>
                     <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,62" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="868,4534" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="804,4128" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -491,14 +491,14 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="830,4306" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="766,3900" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="768,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="704,114" sap2010:WorkflowViewState.IdRef="Assign_5">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                                 </Assign.To>
@@ -506,7 +506,7 @@
                                   <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="768,3722" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="704,3316" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -515,14 +515,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="734,3499" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="670,3093" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="672,57" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]">
+                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -530,7 +530,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="672,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="608,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
@@ -538,12 +538,12 @@
                                       </ui:InvokeWorkflowFile.Arguments>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="672,174" sap2010:WorkflowViewState.IdRef="If_10">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="608,174" sap2010:WorkflowViewState.IdRef="If_10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -562,7 +562,7 @@
                                         </Assign>
                                       </If.Then>
                                     </If>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="672,174" sap2010:WorkflowViewState.IdRef="If_12">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="608,174" sap2010:WorkflowViewState.IdRef="If_12">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -584,7 +584,7 @@
                                         <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_34" />
                                       </If.Else>
                                     </If>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="672,219" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="608,219" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -596,7 +596,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="672,194" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="608,194" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
                                       <ui:AddLogFields.Fields>
                                         <InArgument x:TypeArguments="x:String" x:Key="logF_BusinessProcessName">[Config("logF_BusinessProcessName").ToString]</InArgument>
                                       </ui:AddLogFields.Fields>
@@ -606,7 +606,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:AddLogFields>
-                                    <Sequence DisplayName="Sequence-Reading the transaction data" sap:VirtualizedContainerService.HintSize="672,911" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                    <Sequence DisplayName="Sequence-Reading the transaction data" sap:VirtualizedContainerService.HintSize="608,911" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="sd:DataTable" Name="DT_Queue" />
                                         <Variable x:TypeArguments="x:String" Name="str_TransactionData" />
@@ -683,7 +683,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:LogMessage>
                                     </Sequence>
-                                    <Sequence DisplayName="LoginToWebsite" sap:VirtualizedContainerService.HintSize="672,1628" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <Sequence DisplayName="LoginToWebsite" sap:VirtualizedContainerService.HintSize="608,1134" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="USERID" />
                                         <Variable x:TypeArguments="ss:SecureString" Name="Password" />
@@ -694,7 +694,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Oracle_Flexcube" CacheStrategy="None" DisplayName="Get Credential" FolderPath="AdminFolder" sap:VirtualizedContainerService.HintSize="610,57" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[USERID]">
+                                      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Oracle_Flexcube" CacheStrategy="None" DisplayName="Get Credential" FolderPath="AdminFolder" sap:VirtualizedContainerService.HintSize="546,57" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[USERID]">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -702,13 +702,13 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:GetRobotCredential>
-                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - Login" sap:VirtualizedContainerService.HintSize="610,1460" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="208b1e1f-11fe-4faa-8f83-615206e73ff6" Version="V2">
+                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - Login" sap:VirtualizedContainerService.HintSize="546,966" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="208b1e1f-11fe-4faa-8f83-615206e73ff6" Version="V2">
                                         <uix:NApplicationCard.Body>
                                           <ActivityAction x:TypeArguments="x:Object">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                             </ActivityAction.Argument>
-                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="576,1220" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,726" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="x:Boolean" Name="isLogin" />
                                               </Sequence.Variables>
@@ -718,14 +718,14 @@
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Sequence-Login" sap:VirtualizedContainerService.HintSize="514,1133" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                              <Sequence DisplayName="Sequence-Login" sap:VirtualizedContainerService.HintSize="450,639" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Text="[USERID]" Version="V3">
+                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Text="[USERID]" Version="V3">
                                                   <uix:NTypeInto.Target>
                                                     <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginServlet" CvElementArea="755, 512, 149, 23" CvType="InputBox" DesignTimeRectangle="757, 513, 146, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT USERID'" FullSelectorArgument="&lt;webctrl id='USERID' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='USERID' tag='INPUT' type='' class='TXTstd' aaname='' /&gt;" Guid="4ce183d3-a361-4039-b22a-3e85f5b28b30" InformativeScreenshot="518b07b57aed29062be7d3129e939834.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                                       <uix:TargetAnchorable.Anchors>
@@ -742,7 +742,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </uix:NTypeInto>
-                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="NTypeInto_5" IsPassword="True" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" SecureText="[Password]" Version="V3">
+                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NTypeInto_5" IsPassword="True" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" SecureText="[Password]" Version="V3">
                                                   <uix:NTypeInto.Target>
                                                     <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginServlet" CvElementArea="755, 535, 149, 22" CvType="InputBox" DesignTimeRectangle="757, 536, 146, 20" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT PASSWORD'" FullSelectorArgument="&lt;webctrl id='PASSWORD' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='PASSWORD' tag='INPUT' type='PASSWORD' class='TXTstd' aaname='' /&gt;" Guid="1ed9ef43-fab2-4b6d-ba28-59b405688f04" InformativeScreenshot="207b814a7a89426e51a90d0686f4e480.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                                       <uix:TargetAnchorable.Anchors>
@@ -759,7 +759,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </uix:NTypeInto>
-                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Version="V3">
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Version="V3">
                                                   <uix:NClick.Target>
                                                     <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginServlet" CvElementArea="757, 593, 42, 24" CvType="InputBox" DesignTimeRectangle="759, 594, 40, 21" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl id='fc_sbmit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fc_sbmit' tag='BUTTON' type='submit' class='BTNtext' aaname='Login' check:innerText='Login' /&gt;" Guid="4d85d1ff-3e4b-49a4-a6fb-5eaf98626fea" InformativeScreenshot="ed5930a3fbb6f015db4d85947667c31b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                                   </uix:NClick.Target>
@@ -770,7 +770,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </uix:NClick>
-                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_8">
                                                   <ui:CommentOut.Body>
                                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,133" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -843,7 +843,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:CommentOut>
-                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Version="V3">
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Version="V3">
                                                   <uix:NClick.Target>
                                                     <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/Alert.jsp?MSG_TYPE=I&amp;MESSAGE=~Last%20Login%20:%202024-02-05%2011:02:46__~Current%20Time%20:%2011:4:28:572&amp;THEME=Flexblue.css&amp;OVDSCRTYP=M&amp;OVDROUTINGTYP=NX" CvElementArea="1119, 440, 36, 29" CvTextArea="1125, 445, 22, 15" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="1119, 439, 34, 28" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_OK' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_OK' tag='BUTTON' type='' class='BTNfooterH' aaname='Ok' check:innerText='Ok' /&gt;" Guid="3f9a563c-f779-4ad2-9e5a-a5ef7a34b8c3" InformativeScreenshot="b48be4db33ae93d2093eb76d99fb68c2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-05 - FR Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                                   </uix:NClick.Target>
@@ -854,29 +854,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </uix:NClick>
-                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT fastpath'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Text="CLDACCNT" Version="V3">
-                                                  <uix:NTypeInto.Target>
-                                                    <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" DesignTimeRectangle="1631, 131, 93, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT fastpath'" FullSelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' type='text' class='TXTstd' aaname='Fast Path' /&gt;" Guid="0c7aef87-bdd8-4a94-92bc-b1e8ce574218" InformativeScreenshot="3cb55d53bc776cd46e2442755ac0ae39.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                                                  </uix:NTypeInto.Target>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </uix:NTypeInto>
-                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="208b1e1f-11fe-4faa-8f83-615206e73ff6" Version="V3">
-                                                  <uix:NClick.Target>
-                                                    <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" CvElementArea="1721, 128, 25, 23" CvType="Icon" DesignTimeRectangle="1720, 126, 28, 28" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='btnGo' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='btnGo' tag='SPAN' type='' class='ICOgo' aaname='' /&gt;" Guid="481d9f67-5f95-4572-9eb1-a0be80ed3de0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANpSURBVFhH7ZfZTxNBHMf7J/CIidaEqoh49cUjoIlH6oMlGklUajwSFQU8oqKAYkIVU+IDPBgxihq8okajATwJPBBU5FAORdQEIxjtbltpoQdtaft1ZnSbtk5taZoQE37J56G7M/P77Mzsb7Yyq8uHiWRSYFLg/xcYHfPB5ubfiwYZQmLMC9ijGNBGIe0EiweWUW/MErKEhARQEhMTodFo0NnZCfeYJ6IEfXKL3YuSByPoHnDD5QG3XST8AoEiVILOBK+DhCRw8v4IDt0aRu1bJ9wR+vBgSyBblAuj0Yi8vDwmQWeChsvjY4Py8BAkgc3nzcipNuPWKxu7N57l8AvQoBJUQKlUwusD2vtdaPnsYDT1uf7iabcTedUWrKswYaVOwOZKAx522GEY8Ua1jyhBAjSogFqthps8fVmdFfk3TTh03YjsK5Ygdl8xY/vFn1CXm7D8jIglWgFLT4lYodPjcZcDPyzRScjQdSmsgK7WiqzKIWSUD5FEwaw5a0Ta6R8MZbGIuUUWLCge8V+712aDzfn7beEllggr4CKbjG4u1VkDeTIBC4uNwZwwYP5xkTGvyEAEjAzpWrpWj/InZrZXeIklZBCfhhU4cGMYq8pELCoRyOA0SQQKBaQe/YbZBz9iTnYLVIeboLvWDYcr/HLET4Akn5M/iOT9vVBsa0BS5k2sP1KDO/X9sJNE4QVIhBOgr9ayUj2Ux7+RwQeCOTqIlAI9Uv9AryXvewfF9kbIMy5DlXsdV2s6yF6KtAQkeAJOIrD1goAFx/qRnNsFxc5mPzN2vcSMvR2YeeATUg5/YfxO3oDp6iooN1bgQWNPVNUxrMAoqSgZpR+QpHmEaeqLmKIq8zN1bSUUmbeRuqUOs/a0YWbOGyi2Pmftpqu0aH8/CKtzjJswFK6AXC5nhajnqx2tfSa8fvcdLT0Dfujvtl4R9e0CFud3ImnLY5Z8dXYVWnu+YsjqiroacgUoNGi9d5J6wIOWXMHsRnphN+QbbmBTwV3UNfWypYv07gfyTwFeBwkqJ5idSCt8hSztM9Q09bGzg9f2X8Qs4CAChmEndpxrxos+kc0Kr10kggSkw4geyTR4HQKh6+wje4XOBu9+NPgFeMcxr0MotMCMZ81DifmDJF7E/EkWL9gSBEa0H6XxYvKPyQQL+PAL4CIsQln7fN0AAAAASUVORK5CYII=" InformativeScreenshot="1f22e6888a588c40ed1c59c8a2dd5cb4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                                  </uix:NClick.Target>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </uix:NClick>
-                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                                                   <ui:CommentOut.Body>
                                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -911,7 +889,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:CommentOut>
-                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,237" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,50" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                                   <ui:CommentOut.Body>
                                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,133" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -927,7 +905,7 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <If.Then>
-                                                          <Sequence sap:VirtualizedContainerService.HintSize="416,315" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,315" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -938,7 +916,7 @@
                                                           </Sequence>
                                                         </If.Then>
                                                         <If.Else>
-                                                          <Sequence sap:VirtualizedContainerService.HintSize="376.8,432.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="376.8,432.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -976,6 +954,12 @@
                                                       </If>
                                                     </Sequence>
                                                   </ui:CommentOut.Body>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
                                                 </ui:CommentOut>
                                               </Sequence>
                                             </Sequence>
@@ -999,7 +983,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="768,249" sap2010:WorkflowViewState.IdRef="If_13">
+                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="704,249" sap2010:WorkflowViewState.IdRef="If_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1008,13 +992,13 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Throw DisplayName="Throw Consecutive Exceptions exceeded" Exception="[new Exception(Config(&quot;ExceptionMessage_ConsecutiveErrors&quot;).ToString + &quot; Consecutive retry number: &quot; + (ConsecutiveSystemExceptions+1).ToString)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                  <Throw DisplayName="Throw Consecutive Exceptions exceeded" Exception="[new Exception(Config(&quot;ExceptionMessage_ConsecutiveErrors&quot;).ToString + &quot; Consecutive retry number: &quot; + (ConsecutiveSystemExceptions+1).ToString)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_32" />
+                                  <Sequence DisplayName="Else" sap2010:WorkflowViewState.IdRef="Sequence_32" />
                                 </If.Else>
                               </If>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="768,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="704,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
@@ -1022,7 +1006,7 @@
                             </Sequence>
                           </TryCatch.Try>
                           <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="674,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="770,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1228,26 +1212,14 @@
       <Variable x:TypeArguments="ui:QueueItem" sap2010:Annotation.AnnotationText="Transaction item to be processed. The type of this variable can be changed to match the transaction type in the process. For example, when processing data from a spreadsheet that is read into a DataTable, this type can be changed to DataRow. " Name="TransactionItem" />
       <Variable x:TypeArguments="s:Exception" sap2010:Annotation.AnnotationText="Used during transitions between states to represent exceptions other than business exceptions." Name="SystemException" />
       <Variable x:TypeArguments="ui:BusinessRuleException" sap2010:Annotation.AnnotationText="Used during transitions between states and represents a situation that does not conform to the rules of the process being automated." Name="BusinessException" />
-      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Sequential counter of transaction items." Name="TransactionNumber">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Sequential counter of transaction items." Default="1" Name="TransactionNumber" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="Config" />
-      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Used to control the number of attempts of retrying the transaction processing in case of system exceptions." Name="RetryNumber">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Used to control the number of attempts of retrying the transaction processing in case of system exceptions." Default="0" Name="RetryNumber" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Optionally used to include additional information about the transaction item." Name="TransactionField2" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Optionally used to include additional information about the transaction item." Name="TransactionField1" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Transaction ID used for information and logging purposes. Ideally, the ID should be unique for each transaction. " Name="TransactionID" />
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="Used in case transactions are stored in a DataTable, for example, after being retrieved from a spreadsheet." Name="dt_TransactionData" />
-      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Used to control the number of consecutive system exceptions." Name="ConsecutiveSystemExceptions">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Used to control the number of consecutive system exceptions." Default="0" Name="ConsecutiveSystemExceptions" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>

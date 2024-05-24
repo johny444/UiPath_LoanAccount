@@ -53,7 +53,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1238,5432</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,7177</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OpenLoan_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -163,7 +163,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OpenLoan" sap:VirtualizedContainerService.HintSize="708,5367" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OpenLoan" sap:VirtualizedContainerService.HintSize="708,7112" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="getErrorMessage" />
     </Sequence.Variables>
@@ -172,19 +172,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Tra" sap:VirtualizedContainerService.HintSize="646,5279" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Tra" sap:VirtualizedContainerService.HintSize="646,7001" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="612,5039" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="612,6784" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Boolean" Name="getError">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Boolean" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Boolean" Default="False" Name="getError" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -192,7 +188,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="550,3561" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="550,5041" sap2010:WorkflowViewState.IdRef="TryCatch_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,14 +196,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="512,3301" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                <Sequence sap:VirtualizedContainerService.HintSize="512,4781" sap2010:WorkflowViewState.IdRef="Sequence_52">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Sequence-Main" sap:VirtualizedContainerService.HintSize="450,2576" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                  <Sequence DisplayName="Sequence-Main" sap:VirtualizedContainerService.HintSize="450,2883" sap2010:WorkflowViewState.IdRef="Sequence_41">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="getAccount" />
                     </Sequence.Variables>
@@ -217,6 +213,28 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT fastpath'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_57" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="CLDACCNT" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" DesignTimeRectangle="1631, 131, 93, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT fastpath'" FullSelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' type='text' class='TXTstd' aaname='Fast Path' /&gt;" Guid="0c7aef87-bdd8-4a94-92bc-b1e8ce574218" InformativeScreenshot="3cb55d53bc776cd46e2442755ac0ae39.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NClick_90" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" CvElementArea="1721, 128, 25, 23" CvType="Icon" DesignTimeRectangle="1720, 126, 28, 28" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='btnGo' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='btnGo' tag='SPAN' type='' class='ICOgo' aaname='' /&gt;" Guid="481d9f67-5f95-4572-9eb1-a0be80ed3de0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANpSURBVFhH7ZfZTxNBHMf7J/CIidaEqoh49cUjoIlH6oMlGklUajwSFQU8oqKAYkIVU+IDPBgxihq8okajATwJPBBU5FAORdQEIxjtbltpoQdtaft1ZnSbtk5taZoQE37J56G7M/P77Mzsb7Yyq8uHiWRSYFLg/xcYHfPB5ubfiwYZQmLMC9ijGNBGIe0EiweWUW/MErKEhARQEhMTodFo0NnZCfeYJ6IEfXKL3YuSByPoHnDD5QG3XST8AoEiVILOBK+DhCRw8v4IDt0aRu1bJ9wR+vBgSyBblAuj0Yi8vDwmQWeChsvjY4Py8BAkgc3nzcipNuPWKxu7N57l8AvQoBJUQKlUwusD2vtdaPnsYDT1uf7iabcTedUWrKswYaVOwOZKAx522GEY8Ua1jyhBAjSogFqthps8fVmdFfk3TTh03YjsK5Ygdl8xY/vFn1CXm7D8jIglWgFLT4lYodPjcZcDPyzRScjQdSmsgK7WiqzKIWSUD5FEwaw5a0Ta6R8MZbGIuUUWLCge8V+712aDzfn7beEllggr4CKbjG4u1VkDeTIBC4uNwZwwYP5xkTGvyEAEjAzpWrpWj/InZrZXeIklZBCfhhU4cGMYq8pELCoRyOA0SQQKBaQe/YbZBz9iTnYLVIeboLvWDYcr/HLET4Akn5M/iOT9vVBsa0BS5k2sP1KDO/X9sJNE4QVIhBOgr9ayUj2Ux7+RwQeCOTqIlAI9Uv9AryXvewfF9kbIMy5DlXsdV2s6yF6KtAQkeAJOIrD1goAFx/qRnNsFxc5mPzN2vcSMvR2YeeATUg5/YfxO3oDp6iooN1bgQWNPVNUxrMAoqSgZpR+QpHmEaeqLmKIq8zN1bSUUmbeRuqUOs/a0YWbOGyi2Pmftpqu0aH8/CKtzjJswFK6AXC5nhajnqx2tfSa8fvcdLT0Dfujvtl4R9e0CFud3ImnLY5Z8dXYVWnu+YsjqiroacgUoNGi9d5J6wIOWXMHsRnphN+QbbmBTwV3UNfWypYv07gfyTwFeBwkqJ5idSCt8hSztM9Q09bGzg9f2X8Qs4CAChmEndpxrxos+kc0Kr10kggSkw4geyTR4HQKh6+wje4XOBu9+NPgFeMcxr0MotMCMZ81DifmDJF7E/EkWL9gSBEa0H6XxYvKPyQQL+PAL4CIsQln7fN0AAAAASUVORK5CYII=" InformativeScreenshot="1f22e6888a588c40ed1c59c8a2dd5cb4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_49" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" CvElementArea="20, 127, 21, 24" CvType="Icon" DesignTimeRectangle="18, 126, 28, 28" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='New' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='New' tag='SPAN' type='' class=' ICOnew' aaname='' /&gt;" Guid="d66c7892-3398-4be8-81e9-b91af004c705" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFwSURBVFhH7dbfK0NhHMdxf5ziTlEuXMiFWk0yocRSjGnacjEXRsKSTGJpTkdNQlzQLlwpUSxrtEZ2dvbrbOfjPKfs4nH27FkMtXPqfXF6zvN9XnfnaZLyKv4yE2AC/j8go6jIcpYuGM9gxQTI2sCnlzc8xBLMovEkUrICWduTpmZUqyKAHE6efucGWi1uZp3DPuxfxPEqFZArGs+rVFWA1eFHc+8csxaLB12jK9g5vkMsmUO+BgQ3YMS9BeH0GsJJBKHgLEK7dthdDn2tw+ZF8CiCKZ+IQPgG0QQ/ghuwsBnW31HKovg4A+V+CKtrE/pa+4AXAfES3WNLsDq3cXB+i5K23Wgu3bcAwp4dtsnpcm19Lv1bz7r4OwA6gjABJsAENABALUJNXaH0fvalQedi/QDlfwGjnvHl+gFq6UcBPPcBunn/IbSfoeFcuooAEkHw3IjonpOSvtdoJh0TQKrlTvhZhvNwUlVAvTMBjQ5Q8QFa07DlBcAubAAAAABJRU5ErkJggg==" InformativeScreenshot="a9db18d18a1ede34ea07e50e4d0d715d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
@@ -397,10 +415,10 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
-                  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <Sequence DisplayName="Sequence-Rate" sap:VirtualizedContainerService.HintSize="450,993" sap2010:WorkflowViewState.IdRef="Sequence_45">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -637,13 +655,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
-                  <Sequence DisplayName="Sequence-Save" sap:VirtualizedContainerService.HintSize="450,50" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <Sequence DisplayName="Sequence-Save" sap:VirtualizedContainerService.HintSize="450,287" sap2010:WorkflowViewState.IdRef="Sequence_42">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="OverrideMessage" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -719,7 +737,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;Element state:&quot;+OverrideMessage.ToString]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;Element state:&quot;+OverrideMessage.ToString]" />
                   </Sequence>
                 </Sequence>
               </TryCatch.Try>
@@ -735,14 +753,15 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="496,483" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                    <Sequence sap:VirtualizedContainerService.HintSize="496,570" sap2010:WorkflowViewState.IdRef="Sequence_61">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Catch:&quot;+exception.Message.ToString]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Message:&quot;+exception.Message.ToString]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Source:&quot;+exception.Source.ToString]" />
                       <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Boolean">[getError]</OutArgument>
@@ -764,12 +783,19 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <If Condition="[getError]" sap:VirtualizedContainerService.HintSize="550,1391" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[getError]" sap:VirtualizedContainerService.HintSize="550,1656" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,863" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,1053" sap2010:WorkflowViewState.IdRef="Sequence_63">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;GET ERROR :&quot;+getError.ToString]">
@@ -791,7 +817,12 @@
                       <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/Alert.jsp?MSG_TYPE=C&amp;MESSAGE=~Do%20you%20want%20to%20cancel%20the%20operation%20?&amp;THEME=Flexblue.css&amp;OVDSCRTYP=O&amp;OVDROUTINGTYP=X" CvElementArea="1594, 654, 29, 24" CvTextArea="1600, 659, 17, 12" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="1595, 655, 28, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_OK' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_OK' tag='BUTTON' type='' class='BTNfooterH' aaname='Ok' check:innerText='Ok' /&gt;" Guid="1ea25441-137e-4631-a395-79a6c34f0f95" InformativeScreenshot="44f2542a5bbd7c41fcf111ffbc4ab7e6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-04-15 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Exit'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NClick_92" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716177684391&amp;numeric=&amp;parentArgs=&amp;inTime=39684391#" CvElementArea="1870, 952, 36, 25" CvTextArea="1877, 958, 22, 12" CvTextArgument="Exit" CvType="Button" DesignTimeRectangle="1872, 954, 32, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Exit'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='TBLPageTAB_FOOTER' tag='TABLE' /&gt;&lt;webctrl id='BTN_EXIT_IMG' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='TBLPageTAB_FOOTER' tag='TABLE' /&gt;&lt;webctrl id='BTN_EXIT_IMG' type='button' tag='INPUT' class='BTNfooter' aaname='Exit' check:text='Exit' /&gt;" Guid="4dd08d49-34d5-4f69-9a0a-dbc41bbf1e1d" InformativeScreenshot="0ae61ecb425eaaa611eeea9be0b96a76.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-04-15 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[getError]</OutArgument>
                     </Assign.To>
@@ -799,35 +830,24 @@
                       <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Throw Exception="[new BusinessRuleException(getErrorMessage)]" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  <Throw Exception="[new BusinessRuleException(&quot;ERROR ON CREATE LOAN:  &quot;+getErrorMessage)]" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Throw_3" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,365" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,440" sap2010:WorkflowViewState.IdRef="Sequence_64">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;NOT FOUND ERROR&quot;]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Exit'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_71" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Exit'" sap:VirtualizedContainerService.HintSize="354,180" sap2010:WorkflowViewState.IdRef="NClick_71" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1707811482609&amp;numeric=&amp;parentArgs=&amp;inTime=54282609" CvElementArea="1864, 915, 44, 30" CvTextArea="1871, 921, 27, 15" CvTextArgument="Exit" CvType="Button" DesignTimeRectangle="1865, 915, 40, 28" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Exit'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='TBLPageTAB_FOOTER' tag='TABLE' /&gt;&lt;webctrl id='BTN_EXIT_IMG' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='TBLPageTAB_FOOTER' tag='TABLE' /&gt;&lt;webctrl id='BTN_EXIT_IMG' type='button' tag='INPUT' class='BTNfooter' aaname='Exit' check:text='Exit' /&gt;" Guid="461b621c-5218-4518-b75a-faef8a59e630" InformativeScreenshot="f8ecc84d34b8c5a6f925c3a86d69c804.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-13 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NClick_72" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" DesignTimeRectangle="1720, 126, 28, 28" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='btnGo' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='btnGo' tag='SPAN' type='' class='ICOgo' aaname='' /&gt;" Guid="8b7f54b3-7837-4da6-b2eb-5ea01c80fe07" InformativeScreenshot="6117e333151e5a2482fa534e81dfb4f2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-13 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
