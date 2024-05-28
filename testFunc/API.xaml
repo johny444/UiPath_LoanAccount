@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>979,813</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,627</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>API_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,7 +113,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="API" sap:VirtualizedContainerService.HintSize="512,507" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="API" sap:VirtualizedContainerService.HintSize="512,427" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="JsonString" />
       <Variable x:TypeArguments="njl:JObject" Name="JsonObject" />
@@ -308,54 +308,97 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_14">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,133" sap2010:WorkflowViewState.IdRef="Sequence_25">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,358" sap2010:WorkflowViewState.IdRef="Sequence_27">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="post" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_14">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:Object" Name="request" />
-            </Sequence.Variables>
+          <Sequence DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="450,273" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_13">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,178" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,133" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://localhost:8080/result" sap:VirtualizedContainerService.HintSize="354,93" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="POST" Result="[JsonString]" TimeoutMS="6000">
-                    <ui:HttpClient.Attachments>
-                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                    </ui:HttpClient.Attachments>
-                    <ui:HttpClient.Cookies>
-                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                    </ui:HttpClient.Cookies>
-                    <ui:HttpClient.Headers>
-                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                    </ui:HttpClient.Headers>
-                    <ui:HttpClient.Parameters>
-                      <InArgument x:TypeArguments="x:String" x:Key="id">s</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="mark">s</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="status">s</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="studentid">s</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="time">s</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="ACTION">GETAll</InArgument>
-                    </ui:HttpClient.Parameters>
-                    <ui:HttpClient.UrlSegments>
-                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                    </ui:HttpClient.UrlSegments>
-                  </ui:HttpClient>
+                  <Sequence DisplayName="post" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Object" Name="request" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,178" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://localhost:8080/result" sap:VirtualizedContainerService.HintSize="354,93" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="POST" Result="[JsonString]" TimeoutMS="6000">
+                            <ui:HttpClient.Attachments>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Attachments>
+                            <ui:HttpClient.Cookies>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Cookies>
+                            <ui:HttpClient.Headers>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.Headers>
+                            <ui:HttpClient.Parameters>
+                              <InArgument x:TypeArguments="x:String" x:Key="id">s</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="mark">s</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="status">s</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="studentid">s</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="time">s</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="ACTION">GETAll</InArgument>
+                            </ui:HttpClient.Parameters>
+                            <ui:HttpClient.UrlSegments>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </ui:HttpClient.UrlSegments>
+                          </ui:HttpClient>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://localhost:8080/result" sap:VirtualizedContainerService.HintSize="388,102" sap2010:WorkflowViewState.IdRef="HttpClient_11" Method="POST" Result="[JsonString]" TimeoutMS="6000">
+                      <ui:HttpClient.Attachments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Attachments>
+                      <ui:HttpClient.Cookies>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Cookies>
+                      <ui:HttpClient.Headers>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Headers>
+                      <ui:HttpClient.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Parameters>
+                      <ui:HttpClient.UrlSegments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.UrlSegments>
+                    </ui:HttpClient>
+                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_8" JsonObject="[JsonObject]" JsonString="[JsonString]" />
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,108" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[JsonObject(&quot;name&quot;)]" />
+                  </Sequence>
                 </Sequence>
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
@@ -365,25 +408,25 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://localhost:8080/result" sap:VirtualizedContainerService.HintSize="388,102" sap2010:WorkflowViewState.IdRef="HttpClient_11" Method="POST" Result="[JsonString]" TimeoutMS="6000">
-              <ui:HttpClient.Attachments>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.Attachments>
-              <ui:HttpClient.Cookies>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.Cookies>
-              <ui:HttpClient.Headers>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.Headers>
-              <ui:HttpClient.Parameters>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.Parameters>
-              <ui:HttpClient.UrlSegments>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.UrlSegments>
-            </ui:HttpClient>
-            <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_8" JsonObject="[JsonObject]" JsonString="[JsonString]" />
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,108" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[JsonObject(&quot;name&quot;)]" />
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Console.WriteLine(&quot;Hello, World!&quot;);&#xA;&#xA;output=&quot;test&quot;;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+              <ui:InvokeCode.Arguments>
+                <OutArgument x:TypeArguments="x:String" x:Key="output">[v1]</OutArgument>
+              </ui:InvokeCode.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeCode>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[v1]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MessageBox>
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
@@ -394,13 +437,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Console.WriteLine(&quot;Hello, World!&quot;);&#xD;&#xA;&#xD;&#xA;output=&quot;test&quot;;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
-      <ui:InvokeCode.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="output">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="v1" />
-        </OutArgument>
-      </ui:InvokeCode.Arguments>
-    </ui:InvokeCode>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[v1]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[&quot;rs:&quot;+DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="MessageBox_14" Text="[&quot;rs:&quot;+DateTime.Now.AddMonths(36).ToString(&quot;yyyy-MM-dd&quot;)]" />
   </Sequence>
 </Activity>

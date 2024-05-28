@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1268,1209</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,1209</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -124,7 +124,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="576,1331" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="512,1144" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strProduct" />
       <Variable x:TypeArguments="x:String" Name="strAccount" />
@@ -148,175 +148,199 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="514,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Sequence DisplayName="Sequence-Data Validation" sap:VirtualizedContainerService.HintSize="514,57" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,133" sap2010:WorkflowViewState.IdRef="Sequence_53">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence-Data Validation" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strProduct]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Product").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strAccount]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Account").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strCustomer_Id]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Customer_Id").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strCurrency]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Currency").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strValueDate]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Value_Date").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strAmount_Financed]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Amount_Financed").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strLiquidation_Mode]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Liquidation_Mode").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strINTEREST_RATE]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("INTEREST_RATE").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strODPR_RATE]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("ODPR_RATE").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strLOAN_PURPOSE]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("LOAN_PURPOSE").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strPreferenceOP]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Preferences_Option").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strMaturityDate]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Maturity_Date").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[strLinkedReference]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Linked_Reference").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MultipleAssign>
+            <Sequence DisplayName="Log Data" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;Transaction NumberTest: &quot;+TransactionNum.ToString]" />
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;Product: &quot;+strProduct]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;strAccount: &quot;+strAccount]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;strCustomer_Id: &quot;+strCustomer_Id]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;strCurrency: &quot;+strCurrency]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;strValueDate: &quot;+strValueDate]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[&quot;strMaturityDate: &quot;+strMaturityDate]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;strAmount_Financed: &quot;+strAmount_Financed]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[&quot;strLiquidation_Mode: &quot;+strLiquidation_Mode]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[&quot;strINTEREST_RATE: &quot;+strINTEREST_RATE]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[&quot;strLiquidation_Mode: &quot;+strLiquidation_Mode]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="[&quot;strLinkedReference: &quot;+strLinkedReference]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;strPreferenceOP: &quot;+strPreferenceOP]" />
+            </Sequence>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;--------------------------------------&quot;]" />
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-        <ui:MultipleAssign.AssignOperations>
-          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strProduct]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Product").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strAccount]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Account").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strCustomer_Id]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Customer_Id").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strCurrency]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Currency").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strValueDate]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Value_Date").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strAmount_Financed]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Amount_Financed").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strLiquidation_Mode]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Liquidation_Mode").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strINTEREST_RATE]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("INTEREST_RATE").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strODPR_RATE]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("ODPR_RATE").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strLOAN_PURPOSE]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("LOAN_PURPOSE").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strPreferenceOP]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Preferences_Option").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strMaturityDate]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Maturity_Date").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strLinkedReference]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Linked_Reference").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-          </scg:List>
-        </ui:MultipleAssign.AssignOperations>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:MultipleAssign>
-      <Sequence DisplayName="Log Data" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_3">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_9">
-          <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_48">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="[&quot;Transaction NumberTest: &quot;+TransactionNum.ToString]" />
-            </Sequence>
-          </ui:CommentOut.Body>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:CommentOut>
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;Product: &quot;+strProduct]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;strAccount: &quot;+strAccount]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;strCustomer_Id: &quot;+strCustomer_Id]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;strCurrency: &quot;+strCurrency]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[&quot;strValueDate: &quot;+strValueDate]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[&quot;strMaturityDate: &quot;+strMaturityDate]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;strAmount_Financed: &quot;+strAmount_Financed]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[&quot;strLiquidation_Mode: &quot;+strLiquidation_Mode]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[&quot;strINTEREST_RATE: &quot;+strINTEREST_RATE]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[&quot;strLiquidation_Mode: &quot;+strLiquidation_Mode]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_20" Text="[&quot;strLinkedReference: &quot;+strLinkedReference]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;strPreferenceOP: &quot;+strPreferenceOP]" />
-      </Sequence>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;--------------------------------------&quot;]" />
-    </Sequence>
-    <Sequence DisplayName="Provide" sap:VirtualizedContainerService.HintSize="514,847" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    </ui:CommentOut>
+    <Sequence DisplayName="Provide" sap:VirtualizedContainerService.HintSize="450,660" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="Send_CollateralCode" />
-        <Variable x:TypeArguments="x:String" Name="Send_LiabilityNumber" />
-        <Variable x:TypeArguments="x:String" Name="Send_CollateralValue" />
+        <Variable x:TypeArguments="x:String" Name="getCollateralCode" />
+        <Variable x:TypeArguments="x:String" Default="010183518" Name="setLiabilityNumber" />
+        <Variable x:TypeArguments="x:String" Name="setCollateralValue">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:String">1660</Literal>
+          </Variable.Default>
+        </Variable>
+        <Variable x:TypeArguments="x:String" Name="getLineCode" />
+        <Variable x:TypeArguments="x:Int32" Default="12" Name="setLoanPeriod" />
+        <Variable x:TypeArguments="x:String" Name="getPoolCode" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -324,71 +348,92 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_12">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,221" sap2010:WorkflowViewState.IdRef="Sequence_51">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Collateral.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\Collateral.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="x:String" x:Key="Out_CollateralCode">[Send_CollateralCode]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="Out_LiabilityNumber">[Send_LiabilityNumber]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="Out_CollateralValue">[Send_CollateralValue]</OutArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
-          </Sequence>
-        </ui:CommentOut.Body>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Collateral.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Framework\Collateral.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <OutArgument x:TypeArguments="x:String" x:Key="Out_CollateralCode">[getCollateralCode]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_CollateralValue">[setCollateralValue]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">[setLiabilityNumber]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="In_LoanPeriod">[setLoanPeriod]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Pool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Framework\Pool.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">[setLiabilityNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_CollateralCode">[getCollateralCode]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_CollateralValue">[setCollateralValue]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Out_PoolCode">[getPoolCode]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Facility.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\Facility.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">[setLiabilityNumber]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Out_LineCode">[getLineCode]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_PoolCode">[getPoolCode]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="In_Loanperiod">[setLoanPeriod]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </ui:CommentOut>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,332" sap2010:WorkflowViewState.IdRef="CommentOut_13">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,221" sap2010:WorkflowViewState.IdRef="Sequence_52">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Pool.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Framework\Pool.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">[Send_LiabilityNumber]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_CollateralCode">[Send_CollateralCode]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_CollateralValue">[Send_CollateralValue]</InArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
-          </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Facility.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="452,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Framework\Facility.xaml">
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreateLoan.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\CreateLoan.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="argIn_Config">
+            <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="In_argTransactionNum">
+            <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="TransactionNum" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_MaturityDate">
+            <Literal x:TypeArguments="x:String">2025-05-28</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_Product">
+            <Literal x:TypeArguments="x:String">6101</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_Customer_Id">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="setLiabilityNumber" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_Currency">
+            <Literal x:TypeArguments="x:String">LAK</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_Amount_Financed">
+            <Literal x:TypeArguments="x:String">10000000</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_BranchCode">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="setLiabilityNumber.Substring(0, 3)" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_INTEREST_RATE">
+            <Literal x:TypeArguments="x:String">13</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_ODPR_RATE">
+            <Literal x:TypeArguments="x:String">1,5</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_LinkedReference">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="getLineCode" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_LOAN_PURPOSE">
+            <Literal x:TypeArguments="x:String">A0</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="In_LoanPeriod">
+            <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="setLoanPeriod" />
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreateLoan.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="452,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\CreateLoan.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="argProduct">[strProduct]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argCustomer_Id">[strCustomer_Id]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argCurrency">[strCurrency]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argAmount_Financed">[strAmount_Financed]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argValueDate">[strValueDate]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argMaturityDate">[strMaturityDate]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argBranchCode">[strBranchCode]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argINTEREST_RATE">[strINTEREST_RATE]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argODPR_RATE">[strODPR_RATE]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argLinkedReference">[strLinkedReference]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="argLOAN_PURPOSE">[strLOAN_PURPOSE]</InArgument>
-          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="argIn_Config">[in_Config]</InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="In_argTransactionNum">[TransactionNum]</InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,48" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="CommentOut_8">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,133" sap2010:WorkflowViewState.IdRef="Sequence_47">
             <sap:WorkflowViewStateService.ViewState>
@@ -449,6 +494,6 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
     </Sequence>
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="514,79" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="450,79" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
   </Sequence>
 </Activity>
