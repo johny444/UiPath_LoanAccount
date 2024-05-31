@@ -1,14 +1,18 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Facility" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Facility" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_LiabilityNumber" Type="InArgument(x:String)" />
     <x:Property Name="Out_LineCode" Type="OutArgument(x:String)" />
     <x:Property Name="In_PoolCode" Type="InArgument(x:String)" />
     <x:Property Name="In_Loanperiod" Type="InArgument(x:Int32)" />
+    <x:Property Name="In_FacAmount" Type="InArgument(x:String)" />
   </x:Members>
+  <this:Facility.In_FacAmount>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Facility.In_FacAmount>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1238,5109</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1173,5081</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Facility_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,36 +113,37 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Facility" sap:VirtualizedContainerService.HintSize="608,5044" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Facility" sap:VirtualizedContainerService.HintSize="608,5016" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="010183518" Name="setLiabilityNumber" />
+      <Variable x:TypeArguments="x:String" Name="setLiabilityNumber" />
       <Variable x:TypeArguments="x:String" Name="setLineCode">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">01024S003</Literal>
+          <Literal x:TypeArguments="x:String">01024S001</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Default="FAC FIXED TEST" Name="setDescription" />
       <Variable x:TypeArguments="x:String" Default="[DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)]" Name="setStartDate" />
       <Variable x:TypeArguments="x:String" Default="[DateTime.Now.AddMonths(In_Loanperiod).ToString(&quot;yyyy-MM-dd&quot;)]" Name="setExpiryDate" />
       <Variable x:TypeArguments="x:String" Default="PER_TIME" Name="setFACILITY_TYPE" />
-      <Variable x:TypeArguments="x:String" Default="010183518P0002" Name="setPoolCode" />
-      <Variable x:TypeArguments="x:String" Default="[setPoolCode.Substring(0, 3)]" Name="setBranch" />
+      <Variable x:TypeArguments="x:String" Name="setPoolCode" />
       <Variable x:TypeArguments="x:String" Default="10000000" Name="setFacAmount" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="546,4956" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="104611ef-ec18-45e7-b19c-61cea5369dec" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="546,4928" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="104611ef-ec18-45e7-b19c-61cea5369dec" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,4716" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,4688" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -324,7 +329,24 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please Authorized PoolCode: &quot;+In_PoolCode]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please Authorized PoolCode: &quot;+In_PoolCode]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Pool Links'" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="104611ef-ec18-45e7-b19c-61cea5369dec" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=GEDFACLT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716541355520&amp;numeric=&amp;parentArgs=&amp;inTime=57755520#" CvElementArea="1629, 711, 68, 26" CvTextArea="1632, 718, 58, 11" CvTextArgument="Pool Links" CvType="Button" DesignTimeRectangle="1633, 718, 57, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Pool Links'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='CVS_POOL_LINK' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='CVS_POOL_LINK' tag='SPAN' type='' class='' aaname='Pool Links' check:innerText='Pool Links' /&gt;" Guid="c48ff448-3068-4893-8219-c5e7cabdb2f4" InformativeScreenshot="2a73e94fceaebe4c5d7b95765c574fc3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
@@ -408,7 +430,7 @@
                 <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LaunchSubScreen.jsp?scr=CVS_POOL_LINK&amp;functionid=GEDFACLT&amp;parentFunc=GEDFACLT&amp;lang=ENG&amp;description=Pool%20Links&amp;gAction=NEW&amp;uixml=GEDFACLT&amp;txnBranch=010&amp;callFormLaunched=yes&amp;fromCallform=no" DesignTimeRectangle="625, 283, 48, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LaunchSubScreen.jsp?scr=CVS_POOL_LINK&amp;amp;functionid=GEDFACLT&amp;amp;parent*' tag='IFRAME' /&gt;&lt;webctrl id='BLK_GETBS_POOL_LINK' tag='TABLE' /&gt;&lt;webctrl name='FACILITY_BRANCH_CODE' tableRow='2' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LaunchSubScreen.jsp?scr=CVS_POOL_LINK&amp;amp;functionid=GEDFACLT&amp;amp;parent*' tag='IFRAME' /&gt;&lt;webctrl id='BLK_GETBS_POOL_LINK' tag='TABLE' /&gt;&lt;webctrl name='FACILITY_BRANCH_CODE' class='TextNormal' tag='INPUT' type='text' aaname='Facility Branch Code' /&gt;" Guid="ae11e5cd-2eda-41ed-aa4a-78b80c1a864c" InformativeScreenshot="487ca75487790cc7034db83b44f19bfd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Facility Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="104611ef-ec18-45e7-b19c-61cea5369dec" Text="[setFacAmount]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Facility Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="104611ef-ec18-45e7-b19c-61cea5369dec" Text="[In_FacAmount]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LaunchSubScreen.jsp?scr=CVS_POOL_LINK&amp;functionid=GEDFACLT&amp;parentFunc=GEDFACLT&amp;lang=ENG&amp;description=Pool%20Links&amp;gAction=NEW&amp;uixml=GEDFACLT&amp;txnBranch=010&amp;callFormLaunched=yes&amp;fromCallform=no" DesignTimeRectangle="429, 283, 150, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT __FACILITY_AMOUNT…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LaunchSubScreen.jsp?scr=CVS_POOL_LINK&amp;amp;functionid=GEDFACLT&amp;amp;parent*' tag='IFRAME' /&gt;&lt;webctrl id='BLK_GETBS_POOL_LINK' tag='TABLE' /&gt;&lt;webctrl id='__FACILITY_AMOUNT_POOL_CCYI' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LaunchSubScreen.jsp?scr=CVS_POOL_LINK&amp;amp;functionid=GEDFACLT&amp;amp;parent*' tag='IFRAME' /&gt;&lt;webctrl id='BLK_GETBS_POOL_LINK' tag='TABLE' /&gt;&lt;webctrl id='__FACILITY_AMOUNT_POOL_CCYI' type='TEXT' tag='INPUT' class='TextNormal numeric' aaname='Facility Amount In Pool CCY' /&gt;" Guid="f24c5ec7-b6b3-4606-8ddc-1cfa451084bd" InformativeScreenshot="e4e15ae684c1eb47fcde88aa52fe4e8f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
