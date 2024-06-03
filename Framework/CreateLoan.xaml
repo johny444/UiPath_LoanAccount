@@ -31,7 +31,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,3190</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1174,3362</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OpenLoan_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -145,7 +145,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateLoan" sap:VirtualizedContainerService.HintSize="858,3125" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateLoan" sap:VirtualizedContainerService.HintSize="858,3297" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="getErrorMessage" />
     </Sequence.Variables>
@@ -154,13 +154,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Tra" sap:VirtualizedContainerService.HintSize="796,3037" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Tra" sap:VirtualizedContainerService.HintSize="796,3209" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="762,2797" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="762,2969" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Default="False" Name="getError" />
             </Sequence.Variables>
@@ -170,7 +170,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="700,1054" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="700,1226" sap2010:WorkflowViewState.IdRef="TryCatch_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -178,13 +178,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="662,794" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                <Sequence sap:VirtualizedContainerService.HintSize="662,966" sap2010:WorkflowViewState.IdRef="Sequence_81">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Flowchart sap:VirtualizedContainerService.HintSize="600,657" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                  <Flowchart sap:VirtualizedContainerService.HintSize="1234,467" sap2010:WorkflowViewState.IdRef="Flowchart_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -197,7 +197,7 @@
                     <Flowchart.StartNode>
                       <x:Reference>__ReferenceID5</x:Reference>
                     </Flowchart.StartNode>
-                    <FlowStep x:Name="__ReferenceID5">
+                    <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">205,15</av:Point>
@@ -205,7 +205,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">315,50 415,50</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Sequence-Main" sap:VirtualizedContainerService.HintSize="1016,2986" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                      <Sequence DisplayName="Sequence-Main" sap:VirtualizedContainerService.HintSize="1016,3026" sap2010:WorkflowViewState.IdRef="Sequence_41">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="getAccount" />
                         </Sequence.Variables>
@@ -371,7 +371,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:CommentOut>
-                        <uix:NCheckState DisplayName="Check App State 'Since Maturity'" sap:VirtualizedContainerService.HintSize="954,849" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                        <uix:NCheckState DisplayName="Check App State 'Since Maturity'" sap:VirtualizedContainerService.HintSize="954,889" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                           <uix:NCheckState.IfExists>
                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,447" sap2010:WorkflowViewState.IdRef="Sequence_99">
                               <sap:WorkflowViewStateService.ViewState>
@@ -383,7 +383,7 @@
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/Alert.jsp?MSG_TYPE=O&amp;MESSAGE=CL-SCH049~Since%20Maturity%20Date%20falls%20in%20holiday,%20Hence%20move%20to%20the%20next%20working%20date&amp;THEME=Flexblue.css&amp;OVDSCRTYP=O&amp;OVDROUTINGTYP=X" CvElementArea="1576, 654, 52, 25" CvTextArea="1582, 659, 40, 14" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="1578, 655, 50, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Accept'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_ACCEPT' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_ACCEPT' tag='BUTTON' type='' class='BTNfooter' aaname='Accept' check:innerText='Accept' /&gt;" Guid="3a19d384-ac14-408d-8223-2bfdca532199" InformativeScreenshot="840b4af7c814f02ef08b405e45942375.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CvTextArea="1156, 445, 96, 15" CvTextArgument="Override Message" CvType="Text" DesignTimeRectangle="1157, 440, 393, 19" ElementType="Text" FriendlyName="'Override Message'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl tag='H1' type='' class='WNDtitletxt' aaname='Override Message' check:innerText='Override Message' /&gt;" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -411,7 +411,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NGetText.Target>
                               </uix:NGetText>
-                              <ui:WriteCell Cell="[&quot;B&quot;.ToString+(In_argTransactionNum+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="[argIn_Config(&quot;SheetName&quot;).ToString]" Text="[getAccount]" WorkbookPath="[Path.Combine(argIn_Config(&quot;PathExcel&quot;).ToString,argIn_Config(&quot;FileName&quot;).ToString)]" />
+                              <ui:WriteCell Cell="[&quot;G&quot;.ToString+(In_argTransactionNum+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="[argIn_Config(&quot;SheetName&quot;).ToString]" Text="[getAccount]" WorkbookPath="[Path.Combine(argIn_Config(&quot;PathExcel&quot;).ToString,argIn_Config(&quot;FileName&quot;).ToString)]" />
                               <uix:NGetText DisplayName="Get Text 'Branch Code'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" TextString="[In_BranchCode]" Version="V3">
                                 <uix:NGetText.Target>
                                   <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1710142653313&amp;numeric=&amp;parentArgs=&amp;inTime=52653313" CvElementArea="1251, 209, 62, 25" CvType="InputBox" DesignTimeRectangle="1252, 211, 60, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'010'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_ACCOUNT_MASTER__BRN' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_ACCOUNT_MASTER__BRN' tag='INPUT' type='text' class='TXTro' aaname='Branch Code' /&gt;" Guid="e69191fb-b8ee-4614-96bb-d90d4ba542d8" InformativeScreenshot="9f222a79ca3ca4f6006e2e226ff44c2e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
@@ -428,7 +428,7 @@
                           <uix:NCheckState.Target>
                             <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/Alert.jsp?MSG_TYPE=O&amp;MESSAGE=CL-SCH049~Since%20Maturity%20Date%20falls%20in%20holiday,%20Hence%20move%20to%20the%20next%20working%20date&amp;THEME=Flexblue.css&amp;OVDSCRTYP=O&amp;OVDROUTINGTYP=X" CvTextArea="1171, 524, 372, 11" CvTextArgument="Since Maturity Date falls in holiday, Hence move to the next working date" CvType="Text" DesignTimeRectangle="1169, 524, 373, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Since Maturity'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='ERRTBL' tag='TABLE' /&gt;&lt;webctrl class='SPNtbltwoC' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='ERRTBL' tag='TABLE' /&gt;&lt;webctrl class='SPNtbltwoC' type='' tag='SPAN' aaname=' Since Maturity Date falls in holiday, Hence move to the next working date' check:innerText='Since Maturity Date falls in holiday, Hence move to the next working date' /&gt;" Guid="a5610139-b395-415c-bd7b-618cf59a1e58" InformativeScreenshot="40a517da9d64afff39f66bfb5be8a71b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CvTextArea="1147, 489, 106, 13" CvTextArgument="Override Description" CvType="Text" DesignTimeRectangle="1148, 488, 105, 12" ElementType="Text" FriendlyName="'Override Description'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='ERRTBL' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='ERRTBL' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='SPNtbltwoH' aaname='Override Description' check:innerText='Override Description' /&gt;" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
@@ -443,7 +443,7 @@
                         </uix:NCheckState>
                       </Sequence>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID0">
+                        <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">415,15</av:Point>
@@ -504,7 +504,7 @@
                             </uix:NClick>
                           </Sequence>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID4">
+                            <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">565,15</av:Point>
@@ -574,7 +574,7 @@
                                 </uix:NClick>
                               </Sequence>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID1">
+                                <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">725,15</av:Point>
@@ -645,7 +645,7 @@
                                     </uix:NTypeInto>
                                   </Sequence>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID2">
+                                    <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_5">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">725,175</av:Point>
@@ -659,31 +659,31 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fields'" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NClick_96" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fields'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_96" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1707123418827&amp;numeric=&amp;parentArgs=&amp;inTime=57418827" CvElementArea="1318, 326, 54, 31" CvTextArea="1322, 334, 41, 13" CvTextArgument="Fields" CvType="Button" DesignTimeRectangle="1321, 327, 50, 29" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Fields'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='TAB_UDF' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='TAB_UDF' tag='SPAN' type='' class='' aaname='Fields' check:innerText='Fields' /&gt;" Guid="bc6e4785-42ee-4b11-b91d-e198a508322c" InformativeScreenshot="41cab4fb4e46de1afef9d3e54e09d650.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-05 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                           </uix:NClick.Target>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NClick>
-                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LOAN_PURPOSE'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="NTypeInto_61" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_LOAN_PURPOSE]" Version="V3">
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LOAN_PURPOSE'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,241" sap2010:WorkflowViewState.IdRef="NTypeInto_61" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_LOAN_PURPOSE]" Version="V3">
                                           <uix:NTypeInto.Target>
                                             <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1707122439055&amp;numeric=&amp;parentArgs=&amp;inTime=56439055" CvElementArea="1252, 357, 184, 23" CvType="InputBox" DesignTimeRectangle="1252, 358, 182, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT BLK_UDF__FLDCHAR1'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDF__FLDCHAR1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDF__FLDCHAR1' tag='INPUT' type='text' class='TXTstd' aaname='' /&gt;" Guid="1958580f-ac75-4bcb-b972-55f36a4c8d49" InformativeScreenshot="dd5aaceb8c6d249788583689a566d635.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-05 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                           </uix:NTypeInto.Target>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NTypeInto>
                                       </Sequence>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID3">
+                                        <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_6">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">725,315</av:Point>
@@ -742,7 +742,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:CommentOut>
-                                            <Sequence DisplayName="Sequence-Save" sap:VirtualizedContainerService.HintSize="1016,1149" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                            <Sequence DisplayName="Sequence-Save" sap:VirtualizedContainerService.HintSize="1016,1109" sap2010:WorkflowViewState.IdRef="Sequence_90">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="x:Boolean" Name="OverrideMessage" />
                                               </Sequence.Variables>
@@ -752,7 +752,7 @@
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NCheckState DisplayName="Check App State 'Override Code'" Exists="[OverrideMessage]" sap:VirtualizedContainerService.HintSize="954,925" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                                              <uix:NCheckState DisplayName="Check App State 'Override Code'" Exists="[OverrideMessage]" sap:VirtualizedContainerService.HintSize="954,885" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                                                 <uix:NCheckState.IfExists>
                                                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,636" sap2010:WorkflowViewState.IdRef="Sequence_92">
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -843,11 +843,26 @@
                     <x:Reference>__ReferenceID2</x:Reference>
                     <x:Reference>__ReferenceID3</x:Reference>
                     <x:Reference>__ReferenceID4</x:Reference>
+                    <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">315,155</av:Point>
+                          <av:Size x:Key="ShapeSize">110,70</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="SaveLoanAccount" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </FlowStep>
                   </Flowchart>
-                  <Sequence sap:VirtualizedContainerService.HintSize="600,50" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <Sequence sap:VirtualizedContainerService.HintSize="600,222" sap2010:WorkflowViewState.IdRef="Sequence_52">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
