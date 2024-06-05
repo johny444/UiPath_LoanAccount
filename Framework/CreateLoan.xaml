@@ -143,6 +143,10 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="CreateLoan" sap:VirtualizedContainerService.HintSize="858,3297" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -154,13 +158,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Tra" sap:VirtualizedContainerService.HintSize="796,3209" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Tra" sap:VirtualizedContainerService.HintSize="796,3303" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="762,2969" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="762,3086" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Default="False" Name="getError" />
             </Sequence.Variables>
@@ -170,6 +174,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="700,117" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;test:&quot;+Path.Combine(argIn_Config(&quot;PathExcel&quot;).ToString,argIn_Config(&quot;FileName&quot;).ToString)]" />
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="700,1226" sap2010:WorkflowViewState.IdRef="TryCatch_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -184,7 +189,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Flowchart sap:VirtualizedContainerService.HintSize="1234,467" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                  <Flowchart sap:VirtualizedContainerService.HintSize="600,657" sap2010:WorkflowViewState.IdRef="Flowchart_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -205,7 +210,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">315,50 415,50</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Sequence-Main" sap:VirtualizedContainerService.HintSize="1016,3026" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                      <Sequence DisplayName="Sequence-Main" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_41">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="getAccount" />
                         </Sequence.Variables>
@@ -215,9 +220,15 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT fastpath'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="NTypeInto_57" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="CLDACCNT" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT fastpath'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_57" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="CLDACCNT" Version="V3">
                           <uix:NTypeInto.Target>
-                            <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" DesignTimeRectangle="1631, 131, 93, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT fastpath'" FullSelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' type='text' class='TXTstd' aaname='Fast Path' /&gt;" Guid="0c7aef87-bdd8-4a94-92bc-b1e8ce574218" InformativeScreenshot="3cb55d53bc776cd46e2442755ac0ae39.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" DesignTimeRectangle="1631, 131, 93, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT fastpath'" FullSelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' type='text' class='TXTstd' aaname='Fast Path' /&gt;" Guid="0c7aef87-bdd8-4a94-92bc-b1e8ce574218" InformativeScreenshot="3cb55d53bc776cd46e2442755ac0ae39.png" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.ScopeSelectorArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-01 - Transaction Input' /&gt;</Literal>
+                                </InArgument>
+                              </uix:TargetAnchorable.ScopeSelectorArgument>
+                            </uix:TargetAnchorable>
                           </uix:NTypeInto.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -371,7 +382,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:CommentOut>
-                        <uix:NCheckState DisplayName="Check App State 'Since Maturity'" sap:VirtualizedContainerService.HintSize="954,889" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                        <uix:NCheckState DisplayName="Check App State 'Since Maturity'" sap:VirtualizedContainerService.HintSize="954,849" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                           <uix:NCheckState.IfExists>
                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,447" sap2010:WorkflowViewState.IdRef="Sequence_99">
                               <sap:WorkflowViewStateService.ViewState>

@@ -4,6 +4,7 @@
   "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Database.Activities": "[1.8.2-preview]",
     "UiPath.Excel.Activities": "[2.23.0-preview]",
     "UiPath.GSuite.Activities": "[2.6.21]",
     "UiPath.IntegrationService.Activities": "[1.5.0]",
