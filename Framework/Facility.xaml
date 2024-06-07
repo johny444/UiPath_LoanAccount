@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,5270</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1174,5415</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Facility_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -118,10 +118,10 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Facility" sap:VirtualizedContainerService.HintSize="654,5205" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Facility" sap:VirtualizedContainerService.HintSize="654,5350" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="setLiabilityNumber" />
-      <Variable x:TypeArguments="x:String" Default="01024S001" Name="setLineCode" />
+      <Variable x:TypeArguments="x:String" Name="setLineCode" />
       <Variable x:TypeArguments="x:String" Default="FAC FIXED TEST" Name="setDescription" />
       <Variable x:TypeArguments="x:String" Default="[DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;)]" Name="setStartDate" />
       <Variable x:TypeArguments="x:String" Default="[DateTime.Now.AddMonths(In_Loanperiod).ToString(&quot;yyyy-MM-dd&quot;)]" Name="setExpiryDate" />
@@ -134,13 +134,13 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="592,5117" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="104611ef-ec18-45e7-b19c-61cea5369dec" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="592,5262" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="104611ef-ec18-45e7-b19c-61cea5369dec" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,4877" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,5022" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -241,6 +241,16 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLineCode.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\GetLineCode.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="In_BranchCode">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="In_LiabilityNumber.Substring(0, 3)" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="Out_LineCode">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="setLineCode" />
+                </OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Line Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496,250" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="104611ef-ec18-45e7-b19c-61cea5369dec" Text="[setLineCode]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=GEDFACLT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716541355520&amp;numeric=&amp;parentArgs=&amp;inTime=57755520" CvElementArea="1316, 211, 85, 19" CvType="InputBox" DesignTimeRectangle="1317, 213, 84, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT GETMS_FACILITY__L…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='GETMS_FACILITY__LINE_CODE' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='GETMS_FACILITY__LINE_CODE' tag='INPUT' type='TEXT' class='TextNormal' aaname='Line Code' /&gt;" Guid="2d78e6b9-0d0a-4c06-a449-ce01613e4315" InformativeScreenshot="cb7c3e24bd34532dbd6e44f677dbd17e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">

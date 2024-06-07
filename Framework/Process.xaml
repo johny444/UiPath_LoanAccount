@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,2488</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1174,2503</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -137,15 +137,15 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="703,2423" sap2010:WorkflowViewState.IdRef="Sequence_68">
+  <Sequence sap:VirtualizedContainerService.HintSize="612,2438" sap2010:WorkflowViewState.IdRef="Sequence_68">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="641,2335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="550,2350" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="603,2084" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="512,2099" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strCollateralCurrency" />
             <Variable x:TypeArguments="x:String" Name="strINTEREST_RATE" />
@@ -163,8 +163,8 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="541,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="541,57" sap2010:WorkflowViewState.IdRef="CommentOut_22">
+          <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_22">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,133" sap2010:WorkflowViewState.IdRef="Sequence_66">
                 <sap:WorkflowViewStateService.ViewState>
@@ -344,7 +344,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <Sequence DisplayName="Sequence-Data Validation" sap:VirtualizedContainerService.HintSize="541,57" sap2010:WorkflowViewState.IdRef="Sequence_67">
+          <Sequence DisplayName="Sequence-Data Validation" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_67">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -447,7 +447,7 @@
             </Sequence>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;--------------------------------------&quot;]" />
           </Sequence>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DBCheck.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="541,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="Framework\DBCheck.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DBCheck.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="Framework\DBCheck.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="In_CustAC">
                 <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCollateralAccount" />
@@ -478,7 +478,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
-          <Sequence DisplayName="Provide" sap:VirtualizedContainerService.HintSize="541,1416" sap2010:WorkflowViewState.IdRef="Sequence_63">
+          <Sequence DisplayName="Provide" sap:VirtualizedContainerService.HintSize="450,1416" sap2010:WorkflowViewState.IdRef="Sequence_63">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="getCollateralCode" />
               <Variable x:TypeArguments="x:String" Name="getLineCode" />
@@ -494,12 +494,24 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Collateral.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="Framework\Collateral.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="x:String" x:Key="Out_CollateralCode">[getCollateralCode]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_CollateralValue">[strCollateralValue]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">[strCIF]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="In_LoanPeriod">[IntLoanPeriod]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_Currency">[strCollateralCurrency]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_CollateralAccount">[strCollateralAccount]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="Out_CollateralCode">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="getCollateralCode" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_CollateralValue">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCollateralValue" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCIF" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="In_LoanPeriod">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="IntLoanPeriod" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Currency">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCollateralCurrency" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_CollateralAccount">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCollateralAccount" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -558,11 +570,21 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Facility.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Framework\Facility.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">[strCIF]</InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="Out_LineCode">[getLineCode]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_PoolCode">[getPoolCode]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="In_Loanperiod">[IntLoanPeriod]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="In_FacAmount">[strLoanAmount]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_LiabilityNumber">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCIF" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="Out_LineCode">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="getLineCode" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_PoolCode">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="getPoolCode" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="In_Loanperiod">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="IntLoanPeriod" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_FacAmount">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strLoanAmount" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -597,11 +619,11 @@
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="541,79" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+          <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="450,79" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="607,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>

@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,5301</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1174,5987</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Collateral_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,7 +116,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Collateral" sap:VirtualizedContainerService.HintSize="708,5236" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Collateral" sap:VirtualizedContainerService.HintSize="708,5922" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="getLimitContribution" />
       <Variable x:TypeArguments="x:String" Name="getAvailableAmount" />
@@ -128,27 +128,42 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: TEST10 - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - FR " sap:VirtualizedContainerService.HintSize="646,5148" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: TEST10 - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - FR " sap:VirtualizedContainerService.HintSize="646,5834" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="612,4908" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="612,5594" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="550,4821" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="550,5507" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="512,4568" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="512,5254" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="getBranch">
+                      <Variable.Default>
+                        <Literal x:TypeArguments="x:String">010</Literal>
+                      </Variable.Default>
+                    </Variable>
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SelectBranch.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\SelectBranch.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_BranchCode">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="In_LiabilityNumber.Substring(0, 3)" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Change branch&quot;]" />
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT fastpath'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Text="GEDCOLLT" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login" CvElementArea="1688, 103, 97, 21" CvType="InputBox" DesignTimeRectangle="1690, 106, 75, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT fastpath'" FullSelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' type='text' class='TXTstd' aaname='Fast Path' /&gt;" Guid="bca36de8-9308-4211-a7f1-a35fea7eb7c7" InformativeScreenshot="24a80808206c550ca100315fba0556d8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='TEST10 - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - FR Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
@@ -227,17 +242,60 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'text'" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V3">
+                  <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[getBranch]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[In_LiabilityNumber.Substring(0,3)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;branch:&quot;+getBranch.ToString]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '010'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_39" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="1317, 382, 161, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'text'" FullSelectorArgument="&lt;ctrl name='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - EN*' role='document' /&gt;&lt;ctrl name='Collaterals Maintenance' role='document' /&gt;&lt;ctrl name='Collateral Details' role='grouping' /&gt;&lt;ctrl idx='5' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - EN*' role='document' /&gt;&lt;ctrl name='Collaterals Maintenance' role='document' /&gt;&lt;ctrl name='Collateral Details' role='grouping' /&gt;&lt;ctrl automationid='' role='text' /&gt;" Guid="c72c3625-b6f8-4873-9792-b7e6494a0e24" InformativeScreenshot="8a10d56863c2eb1eb93ef06d48974fcb.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - EN*' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LOV.jsp?title=Liability%20Number&amp;SourceCode=FLEXCUBE&amp;containerId=GEDCOLLT&amp;returnflds=&amp;bindVars=&amp;columnHeaders=Liability%20Id~Liability%20Number~Liability%20Branch~Short%20Name~Customer%20Name&amp;rednFldLabels=Liability%20Id~Liability%20Number~Liability%20Branch~Short%20Name~Customer%20Name&amp;lovId=LOV_LIAB_NO&amp;screentype=M&amp;isME=false&amp;singleView=false&amp;lovType=Y&amp;data_type_str=INT~STRING~STRING~STRING~STRING&amp;column_headings=undefined&amp;fetch_records=200&amp;selectDB=ORACLE&amp;PageSize=10&amp;numReduc=5&amp;objBind_vars=&amp;objRet_flds=LIAB_ID~LIAB_NO~LIAB_BRANCH~~&amp;objForm_name=form1&amp;appSource=FLEXCUBE&amp;curr_dsnName=jdbc/fcjdevDS&amp;curr_module=&amp;functionId=GEDCOLLT&amp;rednCriteria=ID!TEXT!A.ID~LIAB_NO!TEXT!LIAB_NO~LIAB_BRANCH!TEXT!LIAB_BRANCH~SHORT_NAME!TEXT!SHORT_NAME~CUSTOMER_NAME1!TEXT!CUSTOMER_NAME1&amp;txnBranch=030" DesignTimeRectangle="1323, 372, 19, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'010'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl aaname='{0}' tableRow='2' tag='A' /&gt;&quot;, getBranch)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl aaname='{0}' type='TEXT' tag='A' class='Astd' check:innerText='{0}' /&gt;&quot;, getBranch)]" Guid="6c64dc80-4362-45e7-9164-a23d198f61fd" ImageBase64="" InformativeScreenshot="68d26964393ab9049b5a59a0674e46c7.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='chrome.exe' title='01ATSAVANH - 030 - {0} - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;&quot;, getBranch)]" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1327, 350, 88, 12" ElementType="Text" FriendlyName="'Liability Branch'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl aaname='    Liability Branch' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl aaname='    Liability Branch' type='' tag='A' class='Astd' check:innerText='Liability Branch' /&gt;" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
                     </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,265" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '030'" sap:VirtualizedContainerService.HintSize="354,180" sap2010:WorkflowViewState.IdRef="NClick_36" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LOV.jsp?title=Liability%20Number&amp;SourceCode=FLEXCUBE&amp;containerId=GEDCOLLT&amp;returnflds=&amp;bindVars=&amp;columnHeaders=Liability%20Id~Liability%20Number~Liability%20Branch~Short%20Name~Customer%20Name&amp;rednFldLabels=Liability%20Id~Liability%20Number~Liability%20Branch~Short%20Name~Customer%20Name&amp;lovId=LOV_LIAB_NO&amp;screentype=M&amp;isME=false&amp;singleView=false&amp;lovType=Y&amp;data_type_str=INT~STRING~STRING~STRING~STRING&amp;column_headings=undefined&amp;fetch_records=200&amp;selectDB=ORACLE&amp;PageSize=10&amp;numReduc=5&amp;objBind_vars=&amp;objRet_flds=LIAB_ID~LIAB_NO~LIAB_BRANCH~~&amp;objForm_name=form1&amp;appSource=FLEXCUBE&amp;curr_dsnName=jdbc/fcjdevDS&amp;curr_module=&amp;functionId=GEDCOLLT&amp;rednCriteria=ID!TEXT!A.ID~LIAB_NO!TEXT!LIAB_NO~LIAB_BRANCH!TEXT!LIAB_BRANCH~SHORT_NAME!TEXT!SHORT_NAME~CUSTOMER_NAME1!TEXT!CUSTOMER_NAME1&amp;txnBranch=030" CvTextArea="1310, 401, 20, 11" CvTextArgument="030" CvType="Text" DesignTimeRectangle="1307, 401, 21, 11" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'030'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl aaname='{0}' tableRow='2' tag='A' /&gt;&quot;, getBranch)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl aaname='{0}' type='TEXT' tag='A' class='Astd' check:innerText='{0}' /&gt;&quot;, getBranch)]" Guid="a022e721-0a3a-4861-a36a-73b8e9d01c75" InformativeScreenshot="66f8dc3d4576e4e23667dee864c94208.png" ScopeSelectorArgument="[string.Format(&quot;&lt;html app='chrome.exe' title='01ATSAVANH - {0} - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;&quot;, getBranch)]" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="1315, 342, 91, 44" FriendlyName="'Liability Branch'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LOV.jsp?title=Liability%20Number&amp;amp;SourceCode=FLEXCUBE&amp;amp;containerId*' tag='IFRAME' /&gt;&lt;webctrl id='TableLov' tag='TABLE' /&gt;&lt;webctrl type='' class='TBLoneTH' tag='TH' aaname='' check:innerText='Liability Branch' /&gt;" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ui:CommentOut.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </uix:NClick>
+                  </ui:CommentOut>
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Collateral Category'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Text="FIXED_DEPOSITE_AT_LVB" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=GEDCOLLT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716348008550&amp;numeric=&amp;parentArgs=&amp;inTime=37208550" CvElementArea="1316, 210, 182, 18" CvType="InputBox" DesignTimeRectangle="1317, 212, 180, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT GETM_COLL_TYPES__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='GETM_COLL_TYPES__COLLATERAL_TYPE' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='GETM_COLL_TYPES__COLLATERAL_TYPE' tag='INPUT' type='text' class='TextNormal' aaname='Collateral Category' /&gt;" Guid="6230e7ac-fa46-4a84-ac30-b7397421d9d7" InformativeScreenshot="d7cf70c7e311c38cba819331280e1e4b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='TEST10 - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
@@ -393,7 +451,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <Sequence DisplayName="Fields" sap:VirtualizedContainerService.HintSize="450,1928" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Fields" sap:VirtualizedContainerService.HintSize="450,1932" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -465,7 +523,7 @@
                         <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LaunchSubScreen.jsp?scr=CVS_UDF&amp;functionid=CSCUFVAL&amp;parentFunc=GEDCOLLT&amp;lang=ENG&amp;description=User%20Defined%20Fields&amp;gAction=NEW&amp;uixml=CSCUFVAL&amp;txnBranch=010&amp;callFormLaunched=yes&amp;fromCallform=yes" CvElementArea="681, 720, 32, 26" CvTextArea="687, 726, 19, 12" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="683, 722, 28, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LaunchSubScreen.jsp?scr=CVS_UDF&amp;amp;functionid=CSCUFVAL&amp;amp;parentFunc=G*' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='BTN_OK_IMG' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl src='LaunchSubScreen.jsp?scr=CVS_UDF&amp;amp;functionid=CSCUFVAL&amp;amp;parentFunc=G*' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='BTN_OK_IMG' type='button' tag='INPUT' class='BUTTONOk' aaname='Ok' check:text='Ok' /&gt;" Guid="f6418ad8-143d-4c24-a517-def75f589fa9" InformativeScreenshot="bdf0755a795973873793f387af6883d9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Utilization Amount'" sap:VirtualizedContainerService.HintSize="388,180" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Utilization Amount'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=GEDCOLLT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716431580872&amp;numeric=&amp;parentArgs=&amp;inTime=34380872#" DesignTimeRectangle="1317, 382, 160, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT GETM_COLLAT__UTIL…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='GETM_COLLAT__UTIL_AMTI' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='GETM_COLLAT__UTIL_AMTI' tag='INPUT' type='text' class='TextReadonly numeric' aaname='' /&gt;" Guid="2ef227c2-76b2-40e4-8078-9cad238b7ffb" InformativeScreenshot="263e513bda4077f5063d93e2358e6f49.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -529,7 +587,7 @@
                       </uix:NGetText.Target>
                     </uix:NGetText>
                   </Sequence>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Exit'" sap:VirtualizedContainerService.HintSize="450,180" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Exit'" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2e54adf-9637-40c7-b292-14962b26b3a3" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=GEDCOLLT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716432866213&amp;numeric=&amp;parentArgs=29219192&amp;inTime=35666213#" DesignTimeRectangle="1882, 767, 34, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Exit'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29219194' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='BTN_EXIT_IMG' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29219194' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='BTN_EXIT_IMG' type='button' tag='INPUT' class='BUTTONExit' aaname='Exit' check:text='Exit' /&gt;" Guid="d6dace49-40a7-43a7-83dd-062b9177d641" InformativeScreenshot="3ab718cc872a1d56d5dbd1c954287a6e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -548,7 +606,15 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;CATCH: &quot;+exception.Message.ToString]" />
+                    <Sequence sap:VirtualizedContainerService.HintSize="416,377" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;CATCH: &quot;+exception.Message.ToString]" />
+                      <Throw Exception="[new BusinessRuleException(&quot;ON COLLATERAL:&quot;+exception.ToString)]" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                    </Sequence>
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
