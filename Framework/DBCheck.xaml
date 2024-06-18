@@ -15,7 +15,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1238,801</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,812</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DBCheck_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -141,7 +141,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="1298,355" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1298,418" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="x:Int32" Name="remaining" />
       </Flowchart.Variables>
@@ -203,7 +203,7 @@
           </FlowStep>
         </FlowDecision.True>
         <FlowDecision.False>
-          <FlowStep x:Name="__ReferenceID13">
+          <FlowStep x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="FlowStep_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">715,225</av:Point>
@@ -291,7 +291,7 @@
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:LogMessage>
                             <FlowStep.Next>
-                              <FlowStep x:Name="__ReferenceID14">
+                              <FlowStep x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">475,565</av:Point>
@@ -299,27 +299,38 @@
                                     <av:PointCollection x:Key="ConnectorLocation">530,635 530,695</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="LOAN 90%" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_9">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[InOut_LoanAccount]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[(getTDAmount*90/100).ToString]</InArgument>
-                                    </Assign.Value>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </Assign>
-                                  <ui:WriteCell Cell="[argIn_Config(&quot;LoanAmountColumn&quot;).ToString+(In_argTransactionNum+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="WriteCell_13" SheetName="[argIn_Config(&quot;SheetName&quot;).ToString]" Text="[InOut_LoanAccount]" WorkbookPath="[Path.Combine(argIn_Config(&quot;PathExcel&quot;).ToString,argIn_Config(&quot;FileName&quot;).ToString)]" />
-                                </Sequence>
+                                <ui:CommentOut sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="558,452" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="LOAN 90%" sap:VirtualizedContainerService.HintSize="496,364" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[InOut_LoanAccount]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[(getTDAmount*90/100).ToString]</InArgument>
+                                          </Assign.Value>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Assign>
+                                        <ui:WriteCell Cell="[argIn_Config(&quot;LoanAmountColumn&quot;).ToString+(In_argTransactionNum+1).ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="WriteCell_13" SheetName="[argIn_Config(&quot;SheetName&quot;).ToString]" Text="[InOut_LoanAccount]" WorkbookPath="[Path.Combine(argIn_Config(&quot;PathExcel&quot;).ToString,argIn_Config(&quot;FileName&quot;).ToString)]" />
+                                      </Sequence>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                </ui:CommentOut>
                                 <FlowStep.Next>
                                   <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_7">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -328,13 +339,19 @@
                                         <av:Size x:Key="ShapeSize">110,70</av:Size>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot; CIF:&quot; &amp; getCIF &amp; vbCrLf &amp; &quot; DESC:&quot; &amp; getDESC &amp; vbCrLf &amp; &quot;ACCOUNT:&quot; &amp; getCustAc &amp; vbCrLf &amp; &quot;Collateral:&quot; &amp; getTDAmount &amp; vbCrLf &amp; &quot;Currency:&quot; &amp; getTDCcy &amp; vbCrLf &amp; &quot;Maturity_Date:&quot; &amp; Out_Maturity_Date &amp; vbCrLf &amp; &quot;Next_Maturity_Date:&quot; &amp; Out_Next_Maturity_Date &amp; vbCrLf &amp; &quot;Month Remaining:&quot; &amp; remaining &amp; vbCrLf &amp; &quot;Loan Amount:&quot; &amp; InOut_LoanAccount]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </WriteLine>
+                                    <ui:CommentOut sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot; CIF:&quot; &amp; getCIF &amp; vbCrLf &amp; &quot; DESC:&quot; &amp; getDESC &amp; vbCrLf &amp; &quot;ACCOUNT:&quot; &amp; getCustAc &amp; vbCrLf &amp; &quot;Collateral:&quot; &amp; getTDAmount &amp; vbCrLf &amp; &quot;Currency:&quot; &amp; getTDCcy &amp; vbCrLf &amp; &quot;Maturity_Date:&quot; &amp; Out_Maturity_Date &amp; vbCrLf &amp; &quot;Next_Maturity_Date:&quot; &amp; Out_Next_Maturity_Date &amp; vbCrLf &amp; &quot;Month Remaining:&quot; &amp; remaining &amp; vbCrLf &amp; &quot;Loan Amount:&quot; &amp; InOut_LoanAccount]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </WriteLine>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
                                   </FlowStep>
                                 </FlowStep.Next>
                               </FlowStep>
@@ -361,7 +378,7 @@
                       </FlowDecision>
                     </FlowDecision.True>
                     <FlowDecision.False>
-                      <FlowStep x:Name="__ReferenceID12">
+                      <FlowStep x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1035,335</av:Point>
@@ -377,7 +394,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </WriteLine>
                         <FlowStep.Next>
-                          <FlowStep x:Name="__ReferenceID10">
+                          <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">1185,335</av:Point>
@@ -393,7 +410,7 @@
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:LogMessage>
                             <FlowStep.Next>
-                              <FlowStep x:Name="__ReferenceID11">
+                              <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_5">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">1365,335</av:Point>
@@ -428,15 +445,15 @@
             <av:PointCollection x:Key="ConnectorLocation">425,50 535,50</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="DB" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="DB" sap:VirtualizedContainerService.HintSize="514,798" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="Oracle.ManagedDataAccess.Client" ConnectionString="PASSWORD=ibmbgwlvb;DATA SOURCE=&quot;(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.254.6)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = DBGW2)))&quot;;USER ID=ibmbgw;PERSIST SECURITY INFO=True" DatabaseConnection="[db_Connect]" />
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+          <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="452,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_3" ProviderName="Oracle.ManagedDataAccess.Client" ConnectionString="PASSWORD=ibmbgwlvb;DATA SOURCE=&quot;(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.254.6)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = DBGW2)))&quot;;USER ID=ibmbgw;PERSIST SECURITY INFO=True" DatabaseConnection="[db_Connect]" />
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,222" sap2010:WorkflowViewState.IdRef="Sequence_10">
                 <sap:WorkflowViewStateService.ViewState>
@@ -459,14 +476,25 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;In_CustAC:&quot;+In_CustAC]" />
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[Output_DT]" DisplayName="Run Query" ExistingDbConnection="[db_Connect]" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" Sql="[&quot;select t1.cust_no,t1.ac_desc,t1.cust_ac_no,t1.ccy,t1.RECORD_STAT,&#xA;       t1.account_class,&#xA;       t1.ac_open_date,&#xA;       t2.maturity_date,&#xA;       t2.next_maturity_date,&#xA;       t5.DEFAULT_TENOR_MONTHS * 30 Deposit_Tenor,&#xA;       t2.auto_rollover,&#xA;       t2.rollover_type,&#xA;       t3.td_amount,&#xA;       t3.payin_option,&#xA;       t4.multimode_percentage,&#xA;       t4.multimode_tdoffset_acc&#xA;  from sttm_cust_account@CORE t1,&#xA;       ictm_acc@CORE             t2,&#xA;       ICTM_TD_DETAILS@CORE      t3,&#xA;       ICTM_TDPAYIN_DETAILS@CORE t4,&#xA;       sttm_account_class@CORE   t5&#xA; where t1.cust_ac_no = t2.acc&#xA;   and t2.acc = t3.acc&#xA;   and t3.acc = t4.acc&#xA;   and t1.account_class = t5.account_class&#xA;   and t2.maturity_date is not null&#xA;   and t1.RECORD_STAT='O'  &#xA;   and t1.cust_ac_no=&quot;+&quot;'&quot;+In_CustAC+&quot;'&quot;]">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,312" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,201" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;In_CustAC:&quot;+In_CustAC]" />
+              </Sequence>
+            </ui:CommentOut.Body>
+          </ui:CommentOut>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[Output_DT]" DisplayName="Run Query" ExistingDbConnection="[db_Connect]" sap:VirtualizedContainerService.HintSize="452,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" Sql="[&quot;select t1.cust_no,t1.ac_desc,t1.cust_ac_no,t1.ccy,t1.RECORD_STAT,&#xA;       t1.account_class,&#xA;       t1.ac_open_date,&#xA;       t2.maturity_date,&#xA;       t2.next_maturity_date,&#xA;       t5.DEFAULT_TENOR_MONTHS * 30 Deposit_Tenor,&#xA;       t2.auto_rollover,&#xA;       t2.rollover_type,&#xA;       t3.td_amount,&#xA;       t3.payin_option,&#xA;       t4.multimode_percentage,&#xA;       t4.multimode_tdoffset_acc&#xA;  from sttm_cust_account@CORE t1,&#xA;       ictm_acc@CORE             t2,&#xA;       ICTM_TD_DETAILS@CORE      t3,&#xA;       ICTM_TDPAYIN_DETAILS@CORE t4,&#xA;       sttm_account_class@CORE   t5&#xA; where t1.cust_ac_no = t2.acc&#xA;   and t2.acc = t3.acc&#xA;   and t3.acc = t4.acc&#xA;   and t1.account_class = t5.account_class&#xA;   and t2.maturity_date is not null&#xA;   and t1.RECORD_STAT='O'  &#xA;   and t1.cust_ac_no=&quot;+&quot;'&quot;+In_CustAC+&quot;'&quot;]">
             <ui:ExecuteQuery.Parameters>
               <InArgument x:TypeArguments="x:String" x:Key="BRANCH_CODE">010</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="Argument1" />
             </ui:ExecuteQuery.Parameters>
           </ui:ExecuteQuery>
-          <ui:OutputDataTable DataTable="[Output_DT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="388,103" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[str_Data]" />
+          <ui:OutputDataTable DataTable="[Output_DT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="452,103" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[str_Data]" />
         </Sequence>
         <FlowStep.Next>
           <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_2">
@@ -477,7 +505,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">590,85 590,115 589.5,115 589.5,230</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Output_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,3137" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Output_DT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
@@ -613,7 +641,7 @@
       <x:Reference>__ReferenceID12</x:Reference>
       <x:Reference>__ReferenceID13</x:Reference>
       <x:Reference>__ReferenceID14</x:Reference>
-      <FlowStep>
+      <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">45,115</av:Point>
