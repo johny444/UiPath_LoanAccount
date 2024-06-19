@@ -1,0 +1,186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Disbursement" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_Account" Type="InArgument(x:String)" />
+    <x:Property Name="In_LoanAmount" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Disbursement.In_Account>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Disbursement.In_Account>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1238,2043</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Disbursement_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Disbursement" sap:VirtualizedContainerService.HintSize="512,1978" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="450,1890" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1650" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT fastpath'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Text="CLDMNDSB" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login#" DesignTimeRectangle="1690, 106, 75, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT fastpath'" FullSelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fastpath' tag='INPUT' type='text' class='TXTstd' aaname='Fast Path' /&gt;" Guid="570536bd-2998-4c12-ae13-0b114d820490" InformativeScreenshot="d1c0290705d9036eebef8d6d2930f733.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON btnGo'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login#" DesignTimeRectangle="1765, 102, 22, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON btnGo'" FullSelectorArgument="&lt;webctrl id='btnGo' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnGo' tag='BUTTON' type='' class='BTNicon' aaname='Go' /&gt;" Guid="832a2ffb-61ff-454e-9167-4e80a3a10fae" InformativeScreenshot="8886bcab262202b11eb1585754b122b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login#" DesignTimeRectangle="15, 102, 22, 22" DesignTimeScaleFactor="1" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='New' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='New' tag='SPAN' type='' class=' ICOnew' aaname='' /&gt;" Guid="34d09279-6a04-44be-80ac-03753b62990a" InformativeScreenshot="c2da78b2c37c45c51e08eeca5d7ac3fb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Account Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Text="[In_Account]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718697452402&amp;numeric=&amp;parentArgs=&amp;inTime=53852402" DesignTimeRectangle="1061, 192, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_DSBR_MASTER__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__ACTNO' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__ACTNO' tag='INPUT' type='text' class='TXTstd' aaname='Account Number' /&gt;" Guid="ff3e08b5-ffd4-43f5-aaba-a47d73c7b3e4" InformativeScreenshot="5de8572c975e20430d8c3efb0e19220c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="911, 192, 150, 14" ElementType="Text" FriendlyName="'Account Number'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl aaname='Account Number' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl aaname='Account Number' tag='LABEL' type='' class='LBLstd star' check:innerText='Account Number' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Default'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718697452402&amp;numeric=&amp;parentArgs=&amp;inTime=53852402" DesignTimeRectangle="1385, 330, 40, 17" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Default'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__BTN_DEFAULT' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__BTN_DEFAULT' tag='BUTTON' type='' class='BTNtext' aaname='Default' check:innerText='Default' /&gt;" Guid="834c6108-1f3b-402f-97e9-95af1993bc55" InformativeScreenshot="7bff6c69df826a48aa11b7e76bf56091.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'INPUT BLK_DSBR_DETAIL__…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718760549199&amp;numeric=&amp;parentArgs=&amp;inTime=30549199#" DesignTimeRectangle="1296, 514, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_DSBR_DETAIL__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLAMTI' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLAMTI' type='TEXT' tag='INPUT' class='TXTstd numeric' aaname='Settlement Amount' /&gt;" Guid="a42c5a80-b3f4-4f42-8e2a-bca096957129" InformativeScreenshot="ce53a90d8aaa4a82f632f4ac409462db.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'INPUT BLK_DSBR_DETAIL__…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718760549199&amp;numeric=&amp;parentArgs=&amp;inTime=30549199#" CvElementArea="1363, 436, 153, 19" CvType="InputBox" DesignTimeRectangle="1364, 438, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_DSBR_DETAIL__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLACC' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLACC' type='text' tag='INPUT' class='TXTstd' aaname='Settlement Account' /&gt;" Guid="a6c1caf8-8d42-4a15-be0e-9875cef9b040" InformativeScreenshot="e912c08662369ef9d5033754eab816af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="901c4f462e034caa66f50c041d4c4613.jpg" Selector="&lt;html app='chrome.exe' title='*- Transaction Input' /&gt;" Title="01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input" Url="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login#" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

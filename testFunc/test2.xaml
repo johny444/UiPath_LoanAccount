@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1238,1952</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,1864</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>test2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -154,7 +154,7 @@
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="test2" sap:VirtualizedContainerService.HintSize="670,1887" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="test2" sap:VirtualizedContainerService.HintSize="654,1799" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="b" />
       <Variable x:TypeArguments="x:Int32" Name="r" />
@@ -176,7 +176,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="670,1218" sap2010:WorkflowViewState.IdRef="Sequence_43">
           <sap:WorkflowViewStateService.ViewState>
@@ -329,7 +329,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,596" sap2010:WorkflowViewState.IdRef="Sequence_33">
           <sap:WorkflowViewStateService.ViewState>
@@ -389,7 +389,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="558.4,367.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
           <sap:WorkflowViewStateService.ViewState>
@@ -511,7 +511,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="CommentOut_8">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="574.4,1283.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
           <sap:WorkflowViewStateService.ViewState>
@@ -601,7 +601,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="CommentOut_16">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,738.4" sap2010:WorkflowViewState.IdRef="Sequence_62">
           <sap:WorkflowViewStateService.ViewState>
@@ -790,7 +790,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_23">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="CommentOut_23">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="574,1334" sap2010:WorkflowViewState.IdRef="Sequence_74">
           <sap:WorkflowViewStateService.ViewState>
@@ -875,7 +875,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_25">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="CommentOut_25">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="662,733" sap2010:WorkflowViewState.IdRef="Sequence_76">
           <sap:WorkflowViewStateService.ViewState>
@@ -1150,49 +1150,112 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="608,57" sap2010:WorkflowViewState.IdRef="CommentOut_26">
+    <Sequence DisplayName="Word" sap:VirtualizedContainerService.HintSize="592,1264" sap2010:WorkflowViewState.IdRef="Sequence_86">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="D:\RobotExcel\template.docx" sap:VirtualizedContainerService.HintSize="530,1144" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+        <p:WordApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WordDocument">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1011" sap2010:WorkflowViewState.IdRef="Sequence_78">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="Chanthakhan ວຽງມະນີ" ReplaceAll="True" Search="_Name" />
+              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" ReplaceAll="True" Search="_Account">
+                <p:WordReplaceText.Replace>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">01012264846031</Literal>
+                  </InArgument>
+                </p:WordReplaceText.Replace>
+              </p:WordReplaceText>
+              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="010254713" ReplaceAll="True" Search="_CIF" />
+              <p:WordSaveAs DisplayName="Save Document As" FilePath="D:\RobotExcel\WORD-PDF\test.docx" sap:VirtualizedContainerService.HintSize="434,201" sap2010:WorkflowViewState.IdRef="WordSaveAs_2" />
+              <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="D:\RobotExcel\WORD-PDF\test.pdf" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="WordExportToPdf_2" />
+            </Sequence>
+          </ActivityAction>
+        </p:WordApplicationScope.Body>
+      </p:WordApplicationScope>
+    </Sequence>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="592,48" sap2010:WorkflowViewState.IdRef="CommentOut_27">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="654,1343" sap2010:WorkflowViewState.IdRef="Sequence_83">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="513,353" sap2010:WorkflowViewState.IdRef="Sequence_87">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Word" sap:VirtualizedContainerService.HintSize="592,1255" sap2010:WorkflowViewState.IdRef="Sequence_82">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="D:\RobotExcel\template.docx" sap:VirtualizedContainerService.HintSize="530,1144" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
-              <p:WordApplicationScope.Body>
-                <ActivityAction x:TypeArguments="ui:WordDocument">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1011" sap2010:WorkflowViewState.IdRef="Sequence_78">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="451,265" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="DebuggerApi" ScopeGuid="6cb294a5-fa46-4a0e-80e5-e62c90108d4d" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1013" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="getLoan" />
+                      <Variable x:TypeArguments="x:String" Name="tem" />
+                      <Variable x:TypeArguments="x:String" Name="getCollateralKip" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="Chanthakhan ວຽງມະນີ" ReplaceAll="True" Search="_Name" />
-                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" ReplaceAll="True" Search="_Account">
-                      <p:WordReplaceText.Replace>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">01012264846031</Literal>
-                        </InArgument>
-                      </p:WordReplaceText.Replace>
-                    </p:WordReplaceText>
-                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="010254713" ReplaceAll="True" Search="_CIF" />
-                    <p:WordSaveAs DisplayName="Save Document As" FilePath="D:\RobotExcel\WORD-PDF\test.docx" sap:VirtualizedContainerService.HintSize="434,201" sap2010:WorkflowViewState.IdRef="WordSaveAs_2" />
-                    <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="D:\RobotExcel\WORD-PDF\test.pdf" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="WordExportToPdf_2" />
+                    <uix:NGetText DisplayName="Get Text 'Pool Amt.'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6cb294a5-fa46-4a0e-80e5-e62c90108d4d" TextString="[getLoan]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=GEDMPOOL&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718680336238&amp;numeric=&amp;parentArgs=29221383&amp;inTime=36736238" DesignTimeRectangle="925, 333, 178, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'52.539.750,00'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl id='GETM_POOL__POOL_AMOUNTI' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl id='GETM_POOL__POOL_AMOUNTI' tag='INPUT' type='TEXT' class='TextReadonly numeric' aaname='Pool Amt.' /&gt;" Guid="963572e7-44be-4d0e-b362-d67211cc2855" InformativeScreenshot="bbb7fa1bd99f6e5381d309dc439be6b3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="925, 318, 127, 14" ElementType="Text" FriendlyName="'Pool Amt.'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl aaname='Pool Amt.' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl aaname='Pool Amt.' tag='LABEL' type='' class='LABELNormal' check:innerText='Pool Amt.' /&gt;" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_39" Text="[&quot;getLoan:&quot;+getLoan]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_38" Text="[&quot;getLoan:&quot;+getLoan.Replace(&quot;,00&quot;, &quot;&quot;)]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[tem]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[getLoan.Replace(",00", "")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_40" Text="[&quot;getLoan:&quot;+tem.Replace(&quot;.&quot;, &quot;&quot;)]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[getCollateralKip]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[tem.Replace(".", "")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="WriteLine_41" Text="[&quot;90%:&quot;+(Decimal.Parse(getCollateralKip)*90/100).ToString]" />
                   </Sequence>
-                </ActivityAction>
-              </p:WordApplicationScope.Body>
-            </p:WordApplicationScope>
-          </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e0bc2728fb8ea395f7d620db6c9301ba.jpg" Selector="&lt;html app='chrome.exe' title='01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" Title="01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input" Url="http://10.1.0.18:7003/FCJNeoWeb/SMMDIFRM.jsp?chgbrn=true#" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
@@ -1202,67 +1265,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="608,1343" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="DebuggerApi" ScopeGuid="6cb294a5-fa46-4a0e-80e5-e62c90108d4d" Version="V2">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="558,1103" sap2010:WorkflowViewState.IdRef="Sequence_85">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1013" sap2010:WorkflowViewState.IdRef="Sequence_84">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="x:String" Name="getLoan" />
-                <Variable x:TypeArguments="x:String" Name="tem" />
-                <Variable x:TypeArguments="x:String" Name="getCollateralKip" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NGetText DisplayName="Get Text 'Pool Amt.'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6cb294a5-fa46-4a0e-80e5-e62c90108d4d" TextString="[getLoan]" Version="V3">
-                <uix:NGetText.Target>
-                  <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=GEDMPOOL&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718680336238&amp;numeric=&amp;parentArgs=29221383&amp;inTime=36736238" DesignTimeRectangle="925, 333, 178, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'52.539.750,00'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl id='GETM_POOL__POOL_AMOUNTI' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl id='GETM_POOL__POOL_AMOUNTI' tag='INPUT' type='TEXT' class='TextReadonly numeric' aaname='Pool Amt.' /&gt;" Guid="963572e7-44be-4d0e-b362-d67211cc2855" InformativeScreenshot="bbb7fa1bd99f6e5381d309dc439be6b3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                    <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target DesignTimeRectangle="925, 318, 127, 14" ElementType="Text" FriendlyName="'Pool Amt.'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl aaname='Pool Amt.' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' name='29221384' tag='IFRAME' /&gt;&lt;webctrl aaname='Pool Amt.' tag='LABEL' type='' class='LABELNormal' check:innerText='Pool Amt.' /&gt;" SearchSteps="FuzzySelector" />
-                      </scg:List>
-                    </uix:TargetAnchorable.Anchors>
-                  </uix:TargetAnchorable>
-                </uix:NGetText.Target>
-              </uix:NGetText>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_39" Text="[&quot;getLoan:&quot;+getLoan]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_38" Text="[&quot;getLoan:&quot;+getLoan.Replace(&quot;,00&quot;, &quot;&quot;)]" />
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_14">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[tem]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[getLoan.Replace(",00", "")]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_40" Text="[&quot;getLoan:&quot;+tem.Replace(&quot;.&quot;, &quot;&quot;)]" />
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_15">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[getCollateralKip]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[tem.Replace(".", "")]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="WriteLine_41" Text="[&quot;90%:&quot;+(Decimal.Parse(getCollateralKip)*90/100).ToString]" />
-            </Sequence>
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e0bc2728fb8ea395f7d620db6c9301ba.jpg" Selector="&lt;html app='chrome.exe' title='01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" Title="01ATSAVANH - 030 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input" Url="http://10.1.0.18:7003/FCJNeoWeb/SMMDIFRM.jsp?chgbrn=true#" />
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
   </Sequence>
 </Activity>
