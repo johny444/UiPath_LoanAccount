@@ -100,9 +100,10 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="GetLineCode" sap:VirtualizedContainerService.HintSize="1234,356" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="GetLineCode" sap:VirtualizedContainerService.HintSize="1298,778" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="queryOutput" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_Connect" />
@@ -201,7 +202,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,634" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,637" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -358,17 +359,11 @@
                       <av:PointCollection x:Key="ConnectorLocation">810,225 810,275</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;string currentYear = DateTime.Now.ToString(&quot;yy&quot;);&#xD;&#xA;//string currentYear = &quot;17&quot;;&#xD;&#xA;// Construct the prefix using the last two digits of the current year&#xD;&#xA;string prefix = $&quot;{In_branch}{currentYear}S&quot;;&#xD;&#xA;int startNumber = 1;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var maxNumber = existingIDsArray&#xD;&#xA;    .Where(id =&gt; id.StartsWith(prefix))&#xD;&#xA;    .Select(id =&gt; int.Parse(id.Substring(prefix.Length)))&#xD;&#xA;    .DefaultIfEmpty(startNumber - 1)&#xD;&#xA;    .Max();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var nextNumber = maxNumber + 1;&#xD;&#xA;var nextID = $&quot;{prefix}{nextNumber.ToString().PadLeft(3, '0')}&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;nextIDOutput = nextID;&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;//string currentYear = DateTime.Now.ToString(&quot;yy&quot;);&#xD;&#xA;string currentYear = &quot;20&quot;;&#xD;&#xA;// Construct the prefix using the last two digits of the current year&#xD;&#xA;string prefix = $&quot;{In_branch}{currentYear}S&quot;;&#xD;&#xA;int startNumber = 1;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var maxNumber = existingIDsArray&#xD;&#xA;    .Where(id =&gt; id.StartsWith(prefix))&#xD;&#xA;    .Select(id =&gt; int.Parse(id.Substring(prefix.Length)))&#xD;&#xA;    .DefaultIfEmpty(startNumber - 1)&#xD;&#xA;    .Max();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var nextNumber = maxNumber + 1;&#xD;&#xA;var nextID = $&quot;{prefix}{nextNumber.ToString().PadLeft(3, '0')}&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;nextIDOutput = nextID;&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                     <ui:InvokeCode.Arguments>
-                      <InArgument x:TypeArguments="s:String[]" x:Key="existingIDsArray">
-                        <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="ExistLineCodeArray" />
-                      </InArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="nextIDOutput ">
-                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="newLineCode" />
-                      </OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="In_branch">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="In_BranchCode" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="s:String[]" x:Key="existingIDsArray">[ExistLineCodeArray]</InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="nextIDOutput ">[newLineCode]</OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="In_branch">[In_BranchCode]</InArgument>
                     </ui:InvokeCode.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">

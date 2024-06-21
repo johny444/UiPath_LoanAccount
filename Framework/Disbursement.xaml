@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Disbursement" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Disbursement" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_Account" Type="InArgument(x:String)" />
     <x:Property Name="In_LoanAmount" Type="InArgument(x:String)" />
@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1238,2043</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,2478</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Disbursement_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,19 +116,19 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Disbursement" sap:VirtualizedContainerService.HintSize="512,1978" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Disbursement" sap:VirtualizedContainerService.HintSize="512,2413" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="450,1890" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 -" sap:VirtualizedContainerService.HintSize="450,2325" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1650" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,2085" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,16 +165,54 @@
                 <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718697452402&amp;numeric=&amp;parentArgs=&amp;inTime=53852402" DesignTimeRectangle="1385, 330, 40, 17" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Default'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__BTN_DEFAULT' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__BTN_DEFAULT' tag='BUTTON' type='' class='BTNtext' aaname='Default' check:innerText='Default' /&gt;" Guid="834c6108-1f3b-402f-97e9-95af1993bc55" InformativeScreenshot="7bff6c69df826a48aa11b7e76bf56091.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'INPUT BLK_DSBR_DETAIL__…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Remarks'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Text="LOAN BY ROBOT" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718850141246&amp;numeric=&amp;parentArgs=&amp;inTime=33741246" CvElementArea="1060, 388, 154, 18" CvType="InputBox" DesignTimeRectangle="1061, 389, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_DSBR_MASTER__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__REMARKS' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_MASTER__REMARKS' tag='INPUT' type='text' class='TXTstd' aaname='Remarks' /&gt;" Guid="9bf58411-fe90-4ba8-949d-9a8dad79fc04" InformativeScreenshot="3adb61e8ca799ea0ed367af922607402.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*- Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="1002, 391, 47, 11" CvTextArgument="Remarks" CvType="Text" DesignTimeRectangle="911, 389, 150, 14" ElementType="Text" FriendlyName="'Remarks'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl aaname='Remarks' parentid='TBLPageTAB_MAIN' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl aaname='Remarks' parentid='TBLPageTAB_MAIN' tag='LABEL' type='' class='LBLstd' check:innerText='Remarks' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'INPUT BLK_DSBR_DETAIL__…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Text="[In_LoanAmount]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718760549199&amp;numeric=&amp;parentArgs=&amp;inTime=30549199#" DesignTimeRectangle="1296, 514, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_DSBR_DETAIL__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLAMTI' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLAMTI' type='TEXT' tag='INPUT' class='TXTstd numeric' aaname='Settlement Amount' /&gt;" Guid="a42c5a80-b3f4-4f42-8e2a-bca096957129" InformativeScreenshot="ce53a90d8aaa4a82f632f4ac409462db.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'INPUT BLK_DSBR_DETAIL__…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,243" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718760549199&amp;numeric=&amp;parentArgs=&amp;inTime=30549199#" CvElementArea="1363, 436, 153, 19" CvType="InputBox" DesignTimeRectangle="1364, 438, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_DSBR_DETAIL__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLACC' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLACC' type='text' tag='INPUT' class='TXTstd' aaname='Settlement Account' /&gt;" Guid="a6c1caf8-8d42-4a15-be0e-9875cef9b040" InformativeScreenshot="e912c08662369ef9d5033754eab816af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'INPUT BLK_DSBR_DETAIL__…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,241" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDMNDSB&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1718760549199&amp;numeric=&amp;parentArgs=&amp;inTime=30549199#" CvElementArea="1363, 436, 153, 19" CvType="InputBox" DesignTimeRectangle="1364, 438, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_DSBR_DETAIL__…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLACC' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL' tag='TABLE' /&gt;&lt;webctrl id='BLK_DSBR_DETAIL__STTLACC' type='text' tag='INPUT' class='TXTstd' aaname='Settlement Account' /&gt;" Guid="a6c1caf8-8d42-4a15-be0e-9875cef9b040" InformativeScreenshot="e912c08662369ef9d5033754eab816af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/LoginValidateServlet?msgType=NONWORKFLOW&amp;actionType=login#" CvElementArea="184, 103, 20, 20" CvType="Icon" DesignTimeRectangle="183, 102, 22, 22" DesignTimeScaleFactor="1" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='Save' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='Save' tag='SPAN' type='' class='ICOsave' aaname='' /&gt;" Guid="dd556f04-cb7a-4b04-8a55-ce694d83fe39" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVEhL7ZLBCcMwEARVXEpxB64hnxThAtJCmkgDKSGvgLFI0JkVHIiwFuKQbAxaGDih085H7uOD7EEXmTleZA3rAlSEOOdMIKwzK7pOD7k/f3IZbvJ9jRTcAX2DsM5ikWZLBJqLsIPdLorL/6Ic1UQlnE+EM6OpKMxv8X6Jc1NRTPBxriICWpCiwawi/D69Y51UBJC0vBSE9W2KgCWsB2RFNekiMzuJgqwwEix8vb3PLwAAAABJRU5ErkJggg==" InformativeScreenshot="5525d54313ea3cf52c4c98abdc19be99.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d3070cd-1b4e-4963-9398-82a1636bd05c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/Alert.jsp?MSG_TYPE=I&amp;MESSAGE=ST-SAVE-052~Successfully%20Saved%20and%20Authorized&amp;THEME=Flexblue.css&amp;OVDSCRTYP=O&amp;OVDROUTINGTYP=X" CvElementArea="1654, 484, 31, 25" CvTextArea="1661, 490, 18, 12" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="1656, 486, 28, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Ok'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_OK' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='ifr_AlertWin' tag='IFRAME' /&gt;&lt;webctrl id='BTN_OK' tag='BUTTON' type='' class='BTNfooterH' aaname='Ok' check:innerText='Ok' /&gt;" Guid="ac9d41d6-95c2-48a3-8094-d7e3713e7d43" InformativeScreenshot="67171a8e34ed89b488948b2049926cf5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*- Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
