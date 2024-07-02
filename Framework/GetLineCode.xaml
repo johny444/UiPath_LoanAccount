@@ -103,7 +103,7 @@
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="GetLineCode" sap:VirtualizedContainerService.HintSize="1298,778" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="GetLineCode" sap:VirtualizedContainerService.HintSize="1298,467" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="queryOutput" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_Connect" />
@@ -162,7 +162,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:CommentOut>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[queryOutput]" DisplayName="Run Query" ExistingDbConnection="[db_Connect]" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="[&quot;select t1.LIAB_NO, t1.LIAB_NAME, t2.LINE_CODE,t2.LINE_START_DATE, decode(t2.record_stat,'O','OPEN','CLOSE') status&#xA;  from GETM_LIAB@CORE t1, GETM_FACILITY@CORE t2&#xA;  where t1.ID = t2.LIAB_ID&#xA;   and substr(t2.LINE_CODE,1,3)=&quot;+&quot;'&quot;+In_BranchCode+&quot;'&quot;+&#xA;   &quot;and substr(t2.LINE_CODE,6,1)='S' &#xA;   ORDER BY t2.LINE_START_DATE&quot;]">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[queryOutput]" DisplayName="Run Query" ExistingDbConnection="[db_Connect]" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="[&quot;select t1.LIAB_NO, t1.LIAB_NAME, t2.LINE_CODE,t2.LINE_START_DATE, decode(t2.record_stat,'O','OPEN','CLOSE') status&#xD;&#xA;  from GETM_LIAB@CORE t1, GETM_FACILITY@CORE t2&#xD;&#xA;  where t1.ID = t2.LIAB_ID&#xD;&#xA;   and substr(t2.LINE_CODE,1,3)=&quot;+&quot;'&quot;+In_BranchCode+&quot;'&quot;+&#xD;&#xA;   &quot;and substr(t2.LINE_CODE,6,1)='Z' &#xD;&#xA;   ORDER BY t2.LINE_START_DATE&quot;]">
           <ui:ExecuteQuery.Parameters>
             <InArgument x:TypeArguments="x:String" x:Key="BRANCH_CODE">010</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="Argument1" />
@@ -202,13 +202,13 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,637" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,810" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap:VirtualizedContainerService.HintSize="496,549" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                      <Sequence sap:VirtualizedContainerService.HintSize="496,722" sap2010:WorkflowViewState.IdRef="Sequence_1">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="getCIF" />
                           <Variable x:TypeArguments="x:String" Name="getLineCode" />
@@ -306,6 +306,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:GetRowItem>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Previous LineCode: &quot;+getLineCode]" />
                         <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_6">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[ExistLineCodeArray(index)]</OutArgument>
@@ -359,7 +360,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">810,225 810,275</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;//string currentYear = DateTime.Now.ToString(&quot;yy&quot;);&#xD;&#xA;string currentYear = &quot;20&quot;;&#xD;&#xA;// Construct the prefix using the last two digits of the current year&#xD;&#xA;string prefix = $&quot;{In_branch}{currentYear}S&quot;;&#xD;&#xA;int startNumber = 1;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var maxNumber = existingIDsArray&#xD;&#xA;    .Where(id =&gt; id.StartsWith(prefix))&#xD;&#xA;    .Select(id =&gt; int.Parse(id.Substring(prefix.Length)))&#xD;&#xA;    .DefaultIfEmpty(startNumber - 1)&#xD;&#xA;    .Max();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var nextNumber = maxNumber + 1;&#xD;&#xA;var nextID = $&quot;{prefix}{nextNumber.ToString().PadLeft(3, '0')}&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;nextIDOutput = nextID;&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;//string currentYear = DateTime.Now.ToString(&quot;yy&quot;);&#xD;&#xA;string currentYear = &quot;20&quot;;&#xD;&#xA;// Construct the prefix using the last two digits of the current year&#xD;&#xA;string prefix = $&quot;{In_branch}{currentYear}Z&quot;;&#xD;&#xA;int startNumber = 1;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var maxNumber = existingIDsArray&#xD;&#xA;    .Where(id =&gt; id.StartsWith(prefix))&#xD;&#xA;    .Select(id =&gt; int.Parse(id.Substring(prefix.Length)))&#xD;&#xA;    .DefaultIfEmpty(startNumber - 1)&#xD;&#xA;    .Max();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;var nextNumber = maxNumber + 1;&#xD;&#xA;var nextID = $&quot;{prefix}{nextNumber.ToString().PadLeft(3, '0')}&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;nextIDOutput = nextID;&#xD;&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                     <ui:InvokeCode.Arguments>
                       <InArgument x:TypeArguments="s:String[]" x:Key="existingIDsArray">[ExistLineCodeArray]</InArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="nextIDOutput ">[newLineCode]</OutArgument>

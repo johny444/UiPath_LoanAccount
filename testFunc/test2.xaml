@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1238,1864</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,2459</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>test2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -154,7 +154,7 @@
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="test2" sap:VirtualizedContainerService.HintSize="654,1799" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="test2" sap:VirtualizedContainerService.HintSize="654,2394" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="b" />
       <Variable x:TypeArguments="x:Int32" Name="r" />
@@ -1150,13 +1150,37 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Word" sap:VirtualizedContainerService.HintSize="592,1264" sap2010:WorkflowViewState.IdRef="Sequence_86">
+    <Sequence DisplayName="Word" sap:VirtualizedContainerService.HintSize="592,1859" sap2010:WorkflowViewState.IdRef="Sequence_86">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: template - Word (Product Activation Failed)" sap:VirtualizedContainerService.HintSize="530,595" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="d7caf658-80fe-4382-8f5d-23f0077f3abd" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_89">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d7caf658-80fe-4382-8f5d-23f0077f3abd" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="413, 424, 75, 23" CvTextArea="435, 430, 29, 11" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="413, 424, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl idx='2' name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl automationid='' name='Close' role='push button' check:text='Close' /&gt;" Guid="1c0586b6-be77-41c6-9af3-52695b2e7d35" InformativeScreenshot="c2bd574963ed186f653e46ce089b76b7.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='NUIDialog' title='Microsoft Office Activation Wizard' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1936, 1048" Arguments="d:\robotexcel\template.docx" FilePath="C:\Program Files\Microsoft Office\Office15\winword.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJjSURBVFhH7ZfvS1NhFMf3VvAPCIRe71cUChn0wl7nm/DXfkQkk8JeBIZFGSMppcHeqe02N2+zVdBqmBOXL8zUliihiCVIOrUoBRfWaERhreM5xztRmjLpPnsh+8KB+5x92flw7j3PvY9GLWnL7hxQLsVKV+nO01XcPaqrkM7ryqU2bblrSFvmiiEAKBb1ZDB7DxlMHqve5GnWV7WH9JXuOQQABMCQAAEAAQABMP4DwGi9dxCj1GiVrxgtst9g6Zg0mDsAAQABAAEAAQABQBQAbIQMCAAIgMX3DsCezCKB4VTKqweQqX78XGMIpXz2AUj0f0r5fQTAnl1iq2itlM/dgu0A1bfC0OiNQLHNzwCllwIQ6J8Bf/jdJoBdGoS130lwPRlX/xa0BCbYYGsKM4Cjc5TXVPCwxcMA4ddRztXc7FG/A+du97HB0TnGAM9H5iGZ/Ms5U0MXAywsfYM/mCs67VUf4FjNAzYEX75ngM8r3+FtNMa5ZjkCRWdkLj49HxM3BYvLcS5aUvuQzXb3MHehC6GqsAskX8+UuCkIvZrj7bK+ZYDNJy48gtmPqxD99BVutA9z7qKzTxyA4/4Ym/rffIDlLwkeQ5oE6kL30Cz/dtzmE3cLzPYQm6gL9BASwHXXIOfiiV/8EArdiArP+njsSDSGBHCy7jGvSU9fzIjfCaXgJDzDdp+6HNzcCWkiSFdbB9ICkGe32CpaK+XTA+Rex7nX8b4GEPZRyp7M4p/P8tTB5BoCZP9gspMQ4AgC0NHMgQC9CLCQVYB0QoB8BEgdTiUEiCDAatYAdhICFCiXe5BGsw7s50pqtdP2pAAAAABJRU5ErkJggg==" InformativeScreenshot="8b237975cc1dc76912756b2b49a4192d.png" Selector="&lt;wnd app='winword.exe' cls='OpusApp' title='template - Word (Product Activation Failed)' /&gt;" Title="template - Word (Product Activation Failed)" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
       <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="D:\RobotExcel\template.docx" sap:VirtualizedContainerService.HintSize="530,1144" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
         <p:WordApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WordDocument">
@@ -1170,12 +1194,17 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="Chanthakhan ວຽງມະນີ" ReplaceAll="True" Search="_Name" />
-              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" ReplaceAll="True" Search="_Account">
+              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" ReplaceAll="True">
                 <p:WordReplaceText.Replace>
                   <InArgument x:TypeArguments="x:String">
                     <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">01012264846031</Literal>
                   </InArgument>
                 </p:WordReplaceText.Replace>
+                <p:WordReplaceText.Search>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">_Account</Literal>
+                  </InArgument>
+                </p:WordReplaceText.Search>
               </p:WordReplaceText>
               <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,196" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="010254713" ReplaceAll="True" Search="_CIF" />
               <p:WordSaveAs DisplayName="Save Document As" FilePath="D:\RobotExcel\WORD-PDF\test.docx" sap:VirtualizedContainerService.HintSize="434,201" sap2010:WorkflowViewState.IdRef="WordSaveAs_2" />

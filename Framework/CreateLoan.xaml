@@ -13,6 +13,7 @@
     <x:Property Name="In_LOAN_PURPOSE" Type="InArgument(x:String)" />
     <x:Property Name="In_LoanPeriod" Type="InArgument(x:Int32)" />
     <x:Property Name="Out_LoanAccount" Type="OutArgument(x:String)" />
+    <x:Property Name="In_Customer_Relationship_Staff" Type="InArgument(x:String)" />
   </x:Members>
   <this:OpenLoan.argIn_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
@@ -29,10 +30,13 @@
   <this:OpenLoan.In_LOAN_PURPOSE>
     <InArgument x:TypeArguments="x:String" />
   </this:OpenLoan.In_LOAN_PURPOSE>
+  <this:OpenLoan.In_Customer_Relationship_Staff>
+    <InArgument x:TypeArguments="x:String" />
+  </this:OpenLoan.In_Customer_Relationship_Staff>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>848,1590</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1238,1590</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OpenLoan_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -185,7 +189,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="662,797" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                <Sequence sap:VirtualizedContainerService.HintSize="662,793" sap2010:WorkflowViewState.IdRef="Sequence_81">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -404,7 +408,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Maturity Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,241" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="2022-02-01" Version="V3">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Maturity Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,241" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="2022-01-31" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1710139741635&amp;numeric=&amp;parentArgs=&amp;inTime=49741635" CvElementArea="1246, 528, 185, 23" CvType="InputBox" DesignTimeRectangle="1247, 528, 182, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT BLK_ACCOUNT_MASTE…'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_ACCOUNT_MASTER__MATDTI' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_ACCOUNT_MASTER__MATDTI' tag='INPUT' type='TEXT' class='TXTstd' aaname='Maturity Date' /&gt;" Guid="0a19f629-7204-4d05-a704-96bc4cf50509" InformativeScreenshot="b473d88b881ef59f2ec4f783eec05e3f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -580,7 +584,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Defined'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_58" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_INTEREST_RATE]" Version="V3">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Defined'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_58" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[(Int32.Parse(In_INTEREST_RATE)+2).ToString]" Version="V3">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1707125088420&amp;numeric=&amp;parentArgs=&amp;inTime=59088420" CvElementArea="1442, 780, 111, 23" CvType="InputBox" DesignTimeRectangle="1442, 639, 110, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'0'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDE_VALS' tag='TABLE' /&gt;&lt;webctrl id='BLK_UDE_VALS__UDEVALI' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDE_VALS' tag='TABLE' /&gt;&lt;webctrl id='BLK_UDE_VALS__UDEVALI' type='text' tag='INPUT' class='TXTstd numeric' aaname='User Defined Element Value' /&gt;" Guid="1902d853-56f2-4b53-b584-f0fee4339537" InformativeScreenshot="d071b02e7834d9472440cfd1da7cee6e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-05 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -623,23 +627,23 @@
                                   <av:PointCollection x:Key="ConnectorLocation">675,50 725,50</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Components" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                              <Sequence DisplayName="Components" sap:VirtualizedContainerService.HintSize="514,1389" sap2010:WorkflowViewState.IdRef="Sequence_97">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Components'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_112" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Components'" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_112" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716868000473&amp;numeric=&amp;parentArgs=&amp;inTime=38800473" CvElementArea="1028, 265, 79, 25" CvTextArea="1034, 272, 65, 13" CvTextArgument="Components" CvType="Button" DesignTimeRectangle="1032, 267, 74, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Components'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='TAB_COMPONENTS' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='TAB_COMPONENTS' tag='SPAN' type='' class='' aaname='Components' check:innerText='Components' /&gt;" Guid="81485c22-030e-4363-a4d4-cc60874527b4" InformativeScreenshot="cfbd0ea5dcafcb688dbd7edaa276c9d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Schedules'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_109" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Schedules'" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_109" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716866456191&amp;numeric=&amp;parentArgs=&amp;inTime=37256191" CvElementArea="1726, 372, 83, 20" CvType="InputBox" DesignTimeRectangle="1727, 374, 81, 17" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Edit Schedules'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMPONENTS__BTN_EDIT' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMPONENTS__BTN_EDIT' tag='BUTTON' type='' class='BTNtext' aaname='Edit Schedules' check:innerText='Edit Schedules' /&gt;" Guid="5261211e-ef7e-4e06-8a33-2eda35ca258d" InformativeScreenshot="8451a55143f20bc9870f25c40d6bf88c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_35">
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_35">
                                   <ui:CommentOut.Body>
                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="Sequence_102">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -667,18 +671,34 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:CommentOut>
-                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'No of Schedules'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_64" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_LoanPeriod.ToString]" Version="V3">
-                                  <uix:NTypeInto.Target>
-                                    <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716866456191&amp;numeric=&amp;parentArgs=&amp;inTime=37256191" CvTextArea="1566, 596, 14, 11" CvTextArgument="12" CvType="Text" DesignTimeRectangle="1477, 595, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'12'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl id='BLK_COMP_SCH__NOOFSCHI' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl id='BLK_COMP_SCH__NOOFSCHI' type='text' tag='INPUT' class='TXTstd numeric' aaname='No of Schedules' /&gt;" Guid="67dd0ea8-e4f5-42e9-b4de-8651122cb8e6" InformativeScreenshot="5c631a340ff0ddf425b9652baf4fb7ce.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target CvTextArea="1465, 578, 55, 11" CvTextArgument="Schedules" CvType="Text" DesignTimeRectangle="1480, 578, 96, 12" ElementType="Text" FriendlyName="'No of Schedules'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl aaname='No of Schedules' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl aaname='No of Schedules' type='' tag='SPAN' class='SPNtext' check:innerText='No of Schedules' /&gt;" SearchSteps="FuzzySelector, CV" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NTypeInto.Target>
-                                </uix:NTypeInto>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_34">
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,440" sap2010:WorkflowViewState.IdRef="CommentOut_42">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'No of Schedules'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,241" sap2010:WorkflowViewState.IdRef="NTypeInto_64" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_LoanPeriod.ToString]" Version="V3">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716866456191&amp;numeric=&amp;parentArgs=&amp;inTime=37256191" CvTextArea="1566, 596, 14, 11" CvTextArgument="12" CvType="Text" DesignTimeRectangle="1477, 595, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'12'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl id='BLK_COMP_SCH__NOOFSCHI' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl id='BLK_COMP_SCH__NOOFSCHI' type='text' tag='INPUT' class='TXTstd numeric' aaname='No of Schedules' /&gt;" Guid="67dd0ea8-e4f5-42e9-b4de-8651122cb8e6" InformativeScreenshot="5c631a340ff0ddf425b9652baf4fb7ce.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CvTextArea="1465, 578, 55, 11" CvTextArgument="Schedules" CvType="Text" DesignTimeRectangle="1480, 578, 96, 12" ElementType="Text" FriendlyName="'No of Schedules'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl aaname='No of Schedules' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMP_SCH' tag='TABLE' /&gt;&lt;webctrl aaname='No of Schedules' type='' tag='SPAN' class='SPNtext' check:innerText='No of Schedules' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                </ui:CommentOut>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_124" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1719202357389&amp;numeric=&amp;parentArgs=&amp;inTime=40357389" DesignTimeRectangle="1826, 549, 18, 15" DesignTimeScaleFactor="1" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='cmdDelRow_BLK_COMP_SCH' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl parentid='cmdDelRow_BLK_COMP_SCH' tag='SPAN' type='' class='ICOremove' aaname='' /&gt;" Guid="bc98f964-3b5e-4adb-a54b-70169a0ca497" InformativeScreenshot="c565f38a82eae58060f0af5f1f69ae56.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="CommentOut_34">
                                   <ui:CommentOut.Body>
                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,329" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -706,7 +726,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:CommentOut>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Explode Schedules'" sap:VirtualizedContainerService.HintSize="388,180" sap2010:WorkflowViewState.IdRef="NClick_110" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Explode Schedules'" sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="NClick_110" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1716866456191&amp;numeric=&amp;parentArgs=&amp;inTime=37256191" CvElementArea="1726, 393, 104, 19" CvType="InputBox" DesignTimeRectangle="1727, 394, 102, 17" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Explode Schedules'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMPONENTS__BTN_EXPLODE' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_COMPONENTS__BTN_EXPLODE' tag='BUTTON' type='' class='BTNtext' aaname='Explode Schedules' check:innerText='Explode Schedules' /&gt;" Guid="4621260f-7794-4a98-ba77-a88b498a2afe" InformativeScreenshot="485697dfb48457bb343495c5c43353fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01ATSAVANH - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2022-02-01 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                   </uix:NClick.Target>
@@ -809,7 +829,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NClick>
-                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LOAN_PURPOSE'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,241" sap2010:WorkflowViewState.IdRef="NTypeInto_61" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_LOAN_PURPOSE]" Version="V3">
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LOAN_PURPOSE'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,250" sap2010:WorkflowViewState.IdRef="NTypeInto_61" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_LOAN_PURPOSE]" Version="V3">
                                           <uix:NTypeInto.Target>
                                             <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1707122439055&amp;numeric=&amp;parentArgs=&amp;inTime=56439055" CvElementArea="1252, 357, 184, 23" CvType="InputBox" DesignTimeRectangle="1252, 358, 182, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT BLK_UDF__FLDCHAR1'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDF__FLDCHAR1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDF__FLDCHAR1' tag='INPUT' type='text' class='TXTstd' aaname='' /&gt;" Guid="1958580f-ac75-4bcb-b972-55f36a4c8d49" InformativeScreenshot="dd5aaceb8c6d249788583689a566d635.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='01NENG - 010 - 010 - Oracle FLEXCUBE UBS 11.2.0.0.0.0.0 - ENG - 2024-02-05 - Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                                           </uix:NTypeInto.Target>
@@ -820,6 +840,11 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NTypeInto>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT BLK_UDF__FLDCHAR3'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,241" sap2010:WorkflowViewState.IdRef="NTypeInto_69" ScopeIdentifier="965bf106-b458-4bb7-a858-b226ff9b8a47" Text="[In_Customer_Relationship_Staff]" Version="V3">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="http://10.1.0.18:7003/FCJNeoWeb/SMSStartLogServlet?funcid=CLDACCNT&amp;uiName=&amp;msgType=WORKFLOW&amp;actionType=initiate&amp;timestamp=1719202357389&amp;numeric=&amp;parentArgs=&amp;inTime=40357389" CvElementArea="1387, 369, 153, 18" CvType="InputBox" DesignTimeRectangle="1388, 370, 151, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT BLK_UDF__FLDCHAR3'" FullSelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDF__FLDCHAR3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ifr_LaunchWin' tag='IFRAME' /&gt;&lt;webctrl id='BLK_UDF__FLDCHAR3' tag='INPUT' type='text' class='TXTstd' aaname='' /&gt;" Guid="c35f5a3e-fa82-4d98-942e-e35e52cf1c23" InformativeScreenshot="d4979c125c56cefc61e2dd499b7c0487.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*- Transaction Input' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                          </uix:NTypeInto.Target>
+                                        </uix:NTypeInto>
                                       </Sequence>
                                       <FlowStep.Next>
                                         <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_6">
@@ -829,7 +854,7 @@
                                               <av:Size x:Key="ShapeSize">110,70</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="Save" sap:VirtualizedContainerService.HintSize="1078,1500" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                                          <Sequence DisplayName="Save" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_94">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1054,7 +1079,7 @@
                       </Sequence>
                     </FlowStep>
                   </Flowchart>
-                  <Sequence sap:VirtualizedContainerService.HintSize="600,50" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <Sequence sap:VirtualizedContainerService.HintSize="600,48" sap2010:WorkflowViewState.IdRef="Sequence_52">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
